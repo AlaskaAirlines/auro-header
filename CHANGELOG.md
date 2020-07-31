@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.2.1](https://github.com/AlaskaAirlines/auro-header/compare/v1.2.0...v1.2.1) (2020-07-31)
+
+
+### Bug Fixes
+
+* [#3](https://github.com/AlaskaAirlines/auro-header/issues/3) address issue with custom margins and px prop ([04be7e3](https://github.com/AlaskaAirlines/auro-header/commit/04be7e31ae81678cc8377b944094231c63f6fe3e))
+
 # [1.2.0](https://github.com/AlaskaAirlines/auro-header/compare/v1.1.0...v1.2.0) (2020-07-16)
 
 
