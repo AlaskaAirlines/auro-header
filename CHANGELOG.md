@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [1.3.0](https://github.com/AlaskaAirlines/auro-header/compare/v1.2.1...v1.3.0) (2020-09-16)
+
+
+### Features
+
+* [#4](https://github.com/AlaskaAirlines/auro-header/issues/4) add support for BOTH top and bottom margin adjustments at the same time ([0b69f87](https://github.com/AlaskaAirlines/auro-header/commit/0b69f874d2a571cc4e7a5ec90837049d8605993c))
+
 ## [1.2.1](https://github.com/AlaskaAirlines/auro-header/compare/v1.2.0...v1.2.1) (2020-07-31)
 
 
