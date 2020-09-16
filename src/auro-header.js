@@ -18,7 +18,7 @@ class AuroHeader extends LitElement {
     this.display = 'display'
   }
 
-  // function to define props used within the scope of thie component
+  // function to define props used within the scope of this component
   static get properties() {
     return {
       level:    { type: String },
@@ -37,7 +37,31 @@ class AuroHeader extends LitElement {
     `;
   }
 
-  spacingFunction(arg) {
+  // Determines if the spacing is to be applied uniform or individual
+  // Returns either selectors or function
+  spacingDecision(arg) {
+    if (this.margin === 'both') {
+      switch (arg) {
+        case 'none': return `util_stackMarginNone--top util_stackMarginNone--bottom`
+        case 'xxxs': return `util_stackMarginXxxs--top util_stackMarginXxxs--bottom`
+        case 'xxs': return `util_stackMarginXxs--top util_stackMarginXxs--bottom`
+        case 'xs': return `util_stackMarginXs--top util_stackMarginXs--bottom`
+        case 'sm': return `util_stackMarginSm--top util_stackMarginSm--bottom`
+        case 'md': return `util_stackMarginMd--top util_stackMarginMd--bottom`
+        case 'lg': return `util_stackMarginLg--top util_stackMarginLg--bottom`
+        case 'xl': return `util_stackMarginXl--top util_stackMarginXl--bottom`
+        case 'xxl': return `util_stackMarginXxl--top util_stackMarginXxl--bottom`
+        case 'xxxl': return `util_stackMarginXxl--top util_stackMarginXxl--bottom`
+        default: return ''
+      }
+    } else {
+      return this.spacingApplied(arg)
+    }
+  }
+
+  // If spacing is individual, return will be single selector based on input
+  // Returns selector
+  spacingApplied(arg) {
     switch (arg) {
       case 'none': return `util_stackMarginNone--${this.margin}`
       case 'xxxs': return `util_stackMarginXxxs--${this.margin}`
@@ -59,12 +83,12 @@ class AuroHeader extends LitElement {
     }
 
     switch (level) {
-      case '2': return html`<h2 class="heading heading--${this.display} ${this.spacingFunction(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h2>`;
-      case '3': return html`<h3 class="heading heading--${this.display} ${this.spacingFunction(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h3>`;
-      case '4': return html`<h4 class="heading heading--${this.display} ${this.spacingFunction(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h4>`;
-      case '5': return html`<h5 class="heading heading--${this.display} ${this.spacingFunction(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h5>`;
-      case '6': return html`<h6 class="heading heading--${this.display} ${this.spacingFunction(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h6>`;
-      default: return html`<h1 class="heading heading--${this.display} ${this.spacingFunction(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h1>`;
+      case '2': return html`<h2 class="heading heading--${this.display} ${this.spacingDecision(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h2>`;
+      case '3': return html`<h3 class="heading heading--${this.display} ${this.spacingDecision(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h3>`;
+      case '4': return html`<h4 class="heading heading--${this.display} ${this.spacingDecision(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h4>`;
+      case '5': return html`<h5 class="heading heading--${this.display} ${this.spacingDecision(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h5>`;
+      case '6': return html`<h6 class="heading heading--${this.display} ${this.spacingDecision(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h6>`;
+      default: return html`<h1 class="heading heading--${this.display} ${this.spacingDecision(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h1>`;
     }
   }
   // function that renders the HTML and CSS into  the scope of the component
