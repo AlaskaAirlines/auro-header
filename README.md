@@ -1,4 +1,4 @@
-# Auro-header
+# auro-header
 
 `<auro-header>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of quickly creating page and content headers.
 
@@ -11,8 +11,7 @@ All information regarding Project Setup, Technical Details, Tests and informatio
 For the most up to date information on UI development [browser support](https://auro.alaskaair.com/support/browsersSupport)
 
 ## Install
-
-[![Build Status](https://img.shields.io/travis/AlaskaAirlines/auro-header?branch=master&style=for-the-badge)](https://travis-ci.org/github/AlaskaAirlines/auro-header)
+[![Build Status](https://img.shields.io/github/workflow/status/AlaskaAirlines/auro-header/Test%20and%20publish?branch=master&style=for-the-badge)](https://github.com/AlaskaAirlines/auro-header/actions?query=workflow%3A%22test+and+publish%22)
 [![See it on NPM!](https://img.shields.io/npm/v/@alaskaairux/auro-header?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@alaskaairux/auro-header)
 [![License](https://img.shields.io/npm/l/@alaskaairux/auro-header?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
 
