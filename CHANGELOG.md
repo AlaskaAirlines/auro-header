@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [1.4.0](https://github.com/AlaskaAirlines/auro-header/compare/v1.3.0...v1.4.0) (2020-10-30)
+
+
+### Features
+
+* add support for fixed px feature ([fa7108a](https://github.com/AlaskaAirlines/auro-header/commit/fa7108a469ca9ae25b52c3ddfa9b2f73188086ee))
+
 # [1.3.0](https://github.com/AlaskaAirlines/auro-header/compare/v1.2.1...v1.3.0) (2020-09-16)
 
 
