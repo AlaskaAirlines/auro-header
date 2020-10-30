@@ -3,12 +3,13 @@
 
 // ---------------------------------------------------------------------
 
-import { LitElement, html, css } from "lit-element";
+import { LitElement, html } from "lit-element";
 import { ifDefined } from 'lit-html/directives/if-defined.js';
 
 // Import touch detection lib
 import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
+import styleCssFixed from './style-fixed-css.js';
 
 /**
  * auro-header is a custom element to make using headers with the Auro Design System seamless and easy.
@@ -18,7 +19,8 @@ import styleCss from "./style-css.js";
  * @attr {String} color - Allows user to pass in CSS custom property or direct hex value to change the color of the header
  * @attr {String} margin - Specify either top or bottom margin(s) to be altered
  * @attr {String} size - Specify size of margin adjustment, either `none`, `xxxs`, `xxs`, `xs`, `sm`, `md`, `lg`, `xl`, `xxl` or `xxxl`
- * @attr {String} type - Defines of CSS type of component. Option, `px`. To be used in areas where outer REM values cause inconsistent display of styles.
+ * @attr {String} type - **DEPRECATED** Option, `px`. Legacy option for converting REMs to PX. Use `fixed` feature.
+ * @attr {Boolean} fixed - Uses px values instead of rem
  */
 
 // build the component class
@@ -37,15 +39,15 @@ class AuroHeader extends LitElement {
                   reflect: true },
       color:    { type: String },
       margin:   { type: String },
-      size:     { type: String },
-      type:     { type: String }
+      size:     { type: String }
     };
   }
 
   static get styles() {
-    return css`
-      ${styleCss}
-    `;
+    return [
+      styleCss,
+      styleCssFixed
+    ]
   }
 
   /**
