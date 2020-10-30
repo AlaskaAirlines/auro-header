@@ -15,6 +15,12 @@ $auro-spacing-types: stack;
 @import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariableMap";
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/spacingUtility";
 
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
+
+// All the following code is DEPRECATED!
+// With the update for the FIXED feature, this is no longer needed.
+// REMOVE all support for this feature with the next MAJOR release.
+
 // the following styles are only to support use of auro-header
 // in legacy UIs where hard-px values are needed.
 :host([type=px]) {
