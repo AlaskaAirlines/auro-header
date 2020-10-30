@@ -10,6 +10,17 @@ import { ifDefined } from 'lit-html/directives/if-defined.js';
 import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
 
+/**
+ * auro-header is a custom element to make using headers with the Auro Design System seamless and easy.
+ *
+ * @attr {String} level - Determines heading level for HTML element. Options are `1` - `6`
+ * @attr {String} display - Determines presentation of header. Options are `display`, `800`, `700`, `600`, `500`, `400`, `300`.
+ * @attr {String} color - Allows user to pass in CSS custom property or direct hex value to change the color of the header
+ * @attr {String} margin - Specify either top or bottom margin(s) to be altered
+ * @attr {String} size - Specify size of margin adjustment, either `none`, `xxxs`, `xxs`, `xs`, `sm`, `md`, `lg`, `xl`, `xxl` or `xxxl`
+ * @attr {String} type - Defines of CSS type of component. Option, `px`. To be used in areas where outer REM values cause inconsistent display of styles.
+ */
+
 // build the component class
 class AuroHeader extends LitElement {
   constructor() {
@@ -37,11 +48,14 @@ class AuroHeader extends LitElement {
     `;
   }
 
-  // Determines if the spacing is to be applied uniform or individual
-  // Returns either selectors or function
-  spacingDecision(arg) {
+  /**
+   * @private Determines if the spacing is to be applied uniform or individual
+   * @param {string} size - Accepts string for size definition
+   * @returns {string} - Returns either selectors or function
+   */
+  spacingDecision(size) {
     if (this.margin === 'both') {
-      switch (arg) {
+      switch (size) {
         case 'none': return `util_stackMarginNone--top util_stackMarginNone--bottom`
         case 'xxxs': return `util_stackMarginXxxs--top util_stackMarginXxxs--bottom`
         case 'xxs': return `util_stackMarginXxs--top util_stackMarginXxs--bottom`
@@ -55,14 +69,17 @@ class AuroHeader extends LitElement {
         default: return ''
       }
     } else {
-      return this.spacingApplied(arg)
+      return this.spacingApplied(size)
     }
   }
 
-  // If spacing is individual, return will be single selector based on input
-  // Returns selector
-  spacingApplied(arg) {
-    switch (arg) {
+  /**
+   * @private If spacing is individual, return will be single selector based on input
+   * @param {string} size - Accepts string for size definition
+   * @returns {string} - Returns selector
+   */
+  spacingApplied(size) {
+    switch (size) {
       case 'none': return `util_stackMarginNone--${this.margin}`
       case 'xxxs': return `util_stackMarginXxxs--${this.margin}`
       case 'xxs': return `util_stackMarginXxs--${this.margin}`
@@ -77,6 +94,11 @@ class AuroHeader extends LitElement {
     }
   }
 
+  /**
+   * @private Creates HTML template for use in render function
+   * @param {string} level - Accepts string value
+   * @returns {string} - Returns HTML template
+   */
   template(level) {
     if (this.display === '' || this.display === null) {
       this.display = 'display'
