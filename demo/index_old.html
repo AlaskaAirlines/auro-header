@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
+    />
+    <title>Auro Web Component Generator | auro-header custom element</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="module">
+      import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
+      import '@polymer/iron-demo-helpers/demo-snippet';
+    </script>
+    <script type="module" src="../src/auro-header.js"></script>
+    <script src="../demo/alert.js"></script>
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles"></style>
+    </custom-style>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <div class="vertical-section-container">
+      <h1>auro-header</h1>
+      <h2>default display types</h2>
+
+      <demo-snippet>
+        <template>
+          <auro-header>Hello World!</auro-header>
+          <auro-header type="px">Hello World!</auro-header>
+          <auro-header fixed>Hello World!</auro-header>
+        </template>
+      </demo-snippet>
+
+      <demo-snippet>
+        <template>
+          <auro-header >Hello World!</auro-header>
+          <auro-header display="800">Hello World!</auro-header>
+          <auro-header display="700">Hello World!</auro-header>
+          <auro-header display="600">Hello World!</auro-header>
+          <auro-header display="500">Hello World!</auro-header>
+          <auro-header display="400">Hello World!</auro-header>
+          <auro-header display="300">Hello World!</auro-header>
+        </template>
+      </demo-snippet>
+
+      <h2>pixel display types</h2>
+      <demo-snippet>
+        <template>
+          <auro-header type="px">Hello World!</auro-header>
+          <auro-header type="px" display="800">Hello World!</auro-header>
+          <auro-header type="px" display="700">Hello World!</auro-header>
+          <auro-header type="px" display="600">Hello World!</auro-header>
+          <auro-header type="px" display="500">Hello World!</auro-header>
+          <auro-header type="px" display="400">Hello World!</auro-header>
+          <auro-header type="px" display="300">Hello World!</auro-header>
+        </template>
+      </demo-snippet>
+
+      <h2>default display types</h2>
+      <demo-snippet>
+        <template>
+          <auro-header display="400">Hello World!</auro-header>
+        </template>
+      </demo-snippet>
+
+      <h2>default display types with margin over-ride</h2>
+      <demo-snippet>
+        <template>
+          <auro-header level="5" display="400" margin="top" size="xs">Hello World!</auro-header>
+          <auro-header level="5" display="400" margin="bottom" size="xs">Hello World!</auro-header>
+          <auro-header level="5" display="400" margin="both" size="none">Hello World!</auro-header>
+        </template>
+      </demo-snippet>
+
+      <h2>default display types with margin/px over-ride</h2>
+      <demo-snippet>
+        <template>
+          <auro-header level="5" display="400" margin="top" size="xs" type="px">Hello World!</auro-header>
+          <auro-header level="5" display="400" margin="bottom" size="xs" type="px">Hello World!</auro-header>
+        </template>
+      </demo-snippet>
+
+
+
+      <demo-snippet>
+        <template>
+          <auro-header level="2" display="display" size="none" margin="top">SM Hello World!</auro-header>
+        </template>
+      </demo-snippet>
+
+      <demo-snippet>
+        <template>
+          <auro-header>Hello World!</auro-header>
+        </template>
+      </demo-snippet>
+
+      <demo-snippet>
+        <template>
+          <auro-header level="1" display="display" color="var(--auro-color-border-active-on-light)">Hello World!</auro-header>
+        </template>
+      </demo-snippet>
+
+      <demo-snippet>
+        <template>
+          <auro-header level="2" display="display">Hello World!</auro-header>
+        </template>
+      </demo-snippet>
+
+      <demo-snippet>
+        <template>
+          <auro-header level="4" display="500">Hello World!</auro-header>
+        </template>
+      </demo-snippet>
+    </div>
+  </body>
+</html>
