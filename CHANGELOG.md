@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+# [1.5.0](https://github.com/AlaskaAirlines/auro-header/compare/v1.4.0...v1.5.0) (2021-01-23)
+
+
+### Features
+
+* upgrade to use markdown demo page ([e292451](https://github.com/AlaskaAirlines/auro-header/commit/e292451d0a6bfc21df386bb9072356d3378ac70f))
+* upgrde to rollup bundle ([cac5b13](https://github.com/AlaskaAirlines/auro-header/commit/cac5b136cef96e53179f54c147638b315eb9c4b3))
+
 # [1.4.0](https://github.com/AlaskaAirlines/auro-header/compare/v1.3.0...v1.4.0) (2020-10-30)
 
 
