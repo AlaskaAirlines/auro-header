@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.5.1](https://github.com/AlaskaAirlines/auro-header/compare/v1.5.0...v1.5.1) (2021-01-23)
+
+
+### Bug Fixes
+
+* remove unused packages; update fixed style ([ce07aa0](https://github.com/AlaskaAirlines/auro-header/commit/ce07aa04c60eaed72e878d01a55a57ea3df9ddab))
+
 # [1.5.0](https://github.com/AlaskaAirlines/auro-header/compare/v1.4.0...v1.5.0) (2021-01-23)
 
 
