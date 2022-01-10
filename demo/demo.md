@@ -61,6 +61,19 @@ Or vice-versa. This example will output an h1 header element with the `header--8
 ## Header examples
 
 <div class="exampleWrapper">
+  <auro-header level="2" display="700">Hello World!</auro-header>
+</div>
+
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+
+  ```html
+  <auro-header level="2" display="700">Hello World!</auro-header>
+  ```
+
+</auro-accordion>
+
+<div class="exampleWrapper">
   <auro-header level="2" display="600">Hello World!</auro-header>
 </div>
 
