@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.5.2](https://github.com/AlaskaAirlines/auro-header/compare/v1.5.1...v1.5.2) (2022-01-10)
+
+
+### Bug Fixes
+
+* **bundle:** update dependencies to new tokens and wcss ([5dcf959](https://github.com/AlaskaAirlines/auro-header/commit/5dcf95913a95d93625aebc3e64e3d7a8b5a8281b))
+
 ## [1.5.1](https://github.com/AlaskaAirlines/auro-header/compare/v1.5.0...v1.5.1) (2021-01-23)
 
 
