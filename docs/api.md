@@ -16,5 +16,5 @@ auro-header is a custom element to make using headers with the Auro Design Syste
 | `color`   | `color`   | `String` |           | Allows user to pass in CSS custom property or direct hex value to change the color of the header |
 | `display` | `display` | `String` | "display" | Determines presentation of header. Options are `display`, `800`, `700`, `600`, `500`, `400`, `300`. |
 | `level`   | `level`   | `String` |           | Determines heading level for HTML element. Options are `1` - `6` |
-| `margin`  | `margin`  | `String` |           | Specify either top or bottom margin(s) to be altered |
+| `margin`  | `margin`  | `String` |           | Specify the margin(s) to be altered. Options are `top`, `bottom`, or `both`. |
 | `size`    | `size`    | `String` |           | Specify size of margin adjustment, either `none`, `xxxs`, `xxs`, `xs`, `sm`, `md`, `lg`, `xl`, `xxl` or `xxxl` |
