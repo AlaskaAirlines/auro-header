@@ -17,7 +17,7 @@ import styleCssFixed from './style-fixed-css.js';
  * @attr {String} level - Determines heading level for HTML element. Options are `1` - `6`
  * @attr {String} display - Determines presentation of header. Options are `display`, `800`, `700`, `600`, `500`, `400`, `300`.
  * @attr {String} color - Allows user to pass in CSS custom property or direct hex value to change the color of the header
- * @attr {String} margin - Specify either top or bottom margin(s) to be altered
+ * @attr {String} margin - Specify the margin(s) to be altered. Options are `top`, `bottom`, or `both`.
  * @attr {String} size - Specify size of margin adjustment, either `none`, `xxxs`, `xxs`, `xs`, `sm`, `md`, `lg`, `xl`, `xxl` or `xxxl`
  * @attr {String} type - **DEPRECATED** Option, `px`. Legacy option for converting REMs to PX. Use `fixed` feature.
  * @attr {Boolean} fixed - Uses px values instead of rem
