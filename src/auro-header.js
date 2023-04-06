@@ -24,7 +24,7 @@ import styleCssFixed from './style-fixed-css.js';
  */
 
 // build the component class
-class AuroHeader extends LitElement {
+export class AuroHeader extends LitElement {
   constructor() {
     super();
 

@@ -26,7 +26,7 @@ const getSharedPlugins = (isLegacy) => [
 ];
 
 const modernConfig = {
-  input: 'src/auro-header.js',
+  input: 'index.js',
   output: {
     format: 'esm',
     file: 'dist/auro-header__bundled.js'
