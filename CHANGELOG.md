@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.5.3](https://github.com/AlaskaAirlines/auro-header/compare/v1.5.2...v1.5.3) (2023-04-12)
+
+
+### Performance Improvements
+
+* **extend:** allow for custom component registration + extension ([3839c9d](https://github.com/AlaskaAirlines/auro-header/commit/3839c9dded2eae127715c703fdf9fef5c177381b))
+
 ## [1.5.2](https://github.com/AlaskaAirlines/auro-header/compare/v1.5.1...v1.5.2) (2022-01-10)
 
 
