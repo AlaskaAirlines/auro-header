@@ -11,8 +11,8 @@ All information regarding Project Setup, Technical Details, Tests and informatio
 For the most up to date information on UI development [browser support](https://auro.alaskaair.com/support/browsersSupport)
 
 ## Install
-[![Build Status](https://img.shields.io/github/workflow/status/AlaskaAirlines/auro-header/Test%20and%20publish?branch=master&style=for-the-badge)](https://github.com/AlaskaAirlines/auro-header/actions?query=workflow%3A%22test+and+publish%22)
-[![See it on NPM!](https://img.shields.io/npm/v/@alaskaairux/auro-header?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@alaskaairux/auro-header)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/AlaskaAirlines/auro-header/testPublish.yml?style=for-the-badge)](https://github.com/AlaskaAirlines/auro-header/actions/workflows/testPublish.yml)
+[![See it on NPM!](https://img.shields.io/npm/v/@alaskaairux/auro-header?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@ aurodesignsystem/auro-header)
 [![License](https://img.shields.io/npm/l/@alaskaairux/auro-header?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
 
 ```shell
@@ -47,21 +47,26 @@ import "@alaskaairux/auro-header";
 
 The auro-header component follows all best practices for SEO and accessibility standards. This component places all content within the scope of the [slot element](https://auro.alaskaair.com/support/slots) to ensure discoverability of content regardless of JavaScript support.
 
-## Install bundled assets from CDN
+## CDN Use
 
-In cases where the project is not able to process JS assets, there are pre-processed assets available for use. Two bundles are available -- `auro-header__bundled.js` for modern browsers and `auro-header__bundled.es5.js` for legacy browsers (including IE11).
+In cases where the project is not able to process JS assets, there are pre-processed assets available for use.
 
-Since the legacy bundle includes many polyfills that are not needed by modern browsers, we recommend you load these bundles using [differential serving](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) so that the browser only loads the bundle it needs. To accomplish this, the script tag for the modern bundle should have `type="module"` and the script tag for the legacy bundle should have the `nomodule` attribute. See the example below.
+### Install
+
+Include the following example HTML code in the `<head>` element of your page.
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@alaskaairux/webcorestylesheets@latest/dist/bundled/essentials.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/@alaskaairux/auro-header@latest/dist/auro-header__bundled.js" type="module"></script>
+```
 
 **NOTE:** Be sure to replace `@latest` in the URL with the version of the asset you want. @latest is NOT aware of any MAJOR releases, use at your own risk.
 
-```html
-<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
-<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/bundled/essentials.css" />
+### CDN options
 
-<script src="https://unpkg.com/@alaskaairux/auro-header@latest/dist/auro-header__bundled.js" type="module"></script>
-<script src="https://unpkg.com/@alaskaairux/auro-header@latest/dist/auro-header__bundled.es5.js" nomodule></script>
-```
+Both [Unpkg](https://www.unpkg.com/) and [JSDelivr](https://www.jsdelivr.com/) are free open source options that you can use. These are 3rd party resources and Auro is not responsible for their uptime. **Use at your own risk.** These bundle resources are included with the npm package, you are free to use any CDN resource that fits your needs.
 
 ### polyfills.js
 
