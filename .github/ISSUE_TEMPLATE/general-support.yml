@@ -1,0 +1,433 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@fajar-apri-alaska 
+AlaskaAirlines
+/
+auro-header
+Public
+Fork your own copy of AlaskaAirlines/auro-header
+Code
+Issues
+7
+Pull requests
+Actions
+Projects
+Security
+Insights
+Node 18+ updates #45
+ Merged
+blackfalcon merged 14 commits into main from dsande/node18update 3 days ago
++25,492 −16,077 
+ Conversation 1
+ Commits 14
+ Checks 2
+ Files changed 40
+ Merged
+Node 18+ updates
+#45
+Show file tree Hide file tree
+File filter 
+ 
+Filter changed files
+docs(template): update issue templates #38
+Changes to be committed:
+deleted:    .github/ISSUE_TEMPLATE/audit.md
+deleted:    .github/ISSUE_TEMPLATE/bug_report.md
+new file:   .github/ISSUE_TEMPLATE/bug_report.yml
+deleted:    .github/ISSUE_TEMPLATE/develop-design-story.md
+deleted:    .github/ISSUE_TEMPLATE/feature_request.md
+new file:   .github/ISSUE_TEMPLATE/feature_request.yml
+deleted:    .github/ISSUE_TEMPLATE/general-support.md
+new file:   .github/ISSUE_TEMPLATE/general-support.yml
+deleted:    .github/ISSUE_TEMPLATE/new_wc.md
+deleted:    .github/ISSUE_TEMPLATE/parent-design-story.md
+deleted:    .github/ISSUE_TEMPLATE/review-design-story.md
+deleted:    .github/ISSUE_TEMPLATE/symbol-design-story.md
+deleted:    .github/ISSUE_TEMPLATE/user-story.md
+modified:   .github/settings.yml
+@blackfalconblackfalcon committed last week
+commit a626ef293c05e6abaf4e222b3e3f40bd24ed7b15
+  25  
+.github/ISSUE_TEMPLATE/audit.md
+Comment on this file
+This file was deleted.
+
+  37  
+.github/ISSUE_TEMPLATE/bug_report.md
+Comment on this file
+This file was deleted.
+
+  56  
+.github/ISSUE_TEMPLATE/bug_report.yml
+Comment on this file
+@@ -0,0 +1,56 @@
+name: Feature request
+description: Create a report to help us improve
+title: '[issue summary] Please verify version before submitting new issue'
+labels:
+  - 'Type: Bug'
+  - not-reviewed
+  - auro-header
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: version
+    attributes:
+      label: Please verify the version of auro-header you have installed
+  - type: markdown
+    attributes:
+      value: >
+        [![See it on
+        NPM!](https://img.shields.io/npm/v/@alaskaairux/auro-header?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@alaskaairux/auro-header)
+  - type: textarea
+    id: details
+    attributes:
+      label: Please describe the bug
+      description: List out the steps to reproduce the behavior
+      placeholder: 1. Go to '...' 2. Click on '....' 3. Scroll down to '....' 4. See error
+  - type: dropdown
+    id: repro
+    attributes:
+      label: Reproducing the error
+      description: Are you able to reproduce this issue on the [Auro docsite](https://auro.alaskaair.com/)?
+      options:
+        - Yes I can
+        - No I can't
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Please add a  clear and concise description of what you expected to
+        happen.
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here.
+  55  
+.github/ISSUE_TEMPLATE/develop-design-story.md
+Comment on this file
+This file was deleted.
+
+  20  
+.github/ISSUE_TEMPLATE/feature_request.md
+Comment on this file
+This file was deleted.
+
+  29  
+.github/ISSUE_TEMPLATE/feature_request.yml
+Comment on this file
+@@ -0,0 +1,29 @@
+name: Feature request
+description: Suggest an idea for this project
+title: 'auro-header: [feature summary]'
+labels:
+  - 'Type: Feature'
+  - not-reviewed
+  - auro-header
+body:
+  - type: textarea
+    id: request
+    attributes:
+      label: Is your feature request related to a problem? Please describe.
+      description: A clear and concise description of what the problem is.
+      placeholder: Ex. I'm always frustrated when [...]
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the solution you'd like
+      description: A clear and concise description of what you want to happen.
+  - type: textarea
+    id: alternative
+    attributes:
+      label: Describe alternatives you've considered
+      description: A clear and concise description of any alternative solutions or features you've considered.
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add any other context or screenshots about the feature request here.
+  30  
+.github/ISSUE_TEMPLATE/general-support.md
+Comment on this file
+This file was deleted.
+
+  24  
+.github/ISSUE_TEMPLATE/general-support.yml
+Comment on this file
+@@ -0,0 +1,24 @@
+name: General support
+description: Suggestions that are not related to bugs or new features
+title: 'auro-header: [issue]'
+labels:
+  - 'Type: Question'
+  - 'Type: Feature'
+  - not-reviewed
+  - auro-header
+body:
+  - type: textarea
+    id: request
+    attributes:
+      label: General Support Request
+      description: A clear and concise description of what you are interested in seeing.
+  - type: textarea
+    id: solution
+    attributes:
+      label: Possible Solution
+      description: Not obligatory, but suggest an idea of how to implement the requested update.
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add any other context or screenshots about the feature request here.
+  40  
+.github/ISSUE_TEMPLATE/new_wc.md
+Comment on this file
+This file was deleted.
+
+  33  
+.github/ISSUE_TEMPLATE/parent-design-story.md
+Comment on this file
+This file was deleted.
+
+  28  
+.github/ISSUE_TEMPLATE/review-design-story.md
+Comment on this file
+This file was deleted.
+
+  28  
+.github/ISSUE_TEMPLATE/symbol-design-story.md
+Marking files as viewed can help keep track of your progress, but will not affect your submitted reviewViewed
+Comment on this file
+This file was deleted.
+
+  61  
+.github/ISSUE_TEMPLATE/user-story.md
+Marking files as viewed can help keep track of your progress, but will not affect your submitted reviewViewed
+Comment on this file
+This file was deleted.
+
+   109  
+.github/settings.yml
+Marking files as viewed can help keep track of your progress, but will not affect your submitted reviewViewed
+Comment on this file
+@@ -47,6 +47,7 @@ branches:
+        dismiss_stale_reviews: true
+        # Blocks merge until code owners have reviewed.
+        require_code_owner_reviews: false
+        # Required. Require status checks to pass before merging. Set to null to disable
+        # Specify which users and teams can dismiss pull request reviews. Pass an empty dismissal_restrictions object to disable. User and team dismissal_restrictions are only available for organization-owned repositories. Omit this parameter for personal repositories.
+        dismissal_restrictions:
+          users: ["blackfalcon"]
+@@ -55,7 +56,7 @@ branches:
+        # Required. Require branches to be up to date before merging.
+        strict: true
+        # Required. The list of status checks to require in order to merge into this branch
+        contexts: ["test (11.x)", "test (12.x)", "test (14.x)", "license/cla"]
+        contexts: ["test (18.x)", "license/cla"]
+      # Required. Enforce all configured restrictions for administrators. Set to true to enforce required status checks for repository administrators. Set to null to disable.
+      enforce_admins: false
+      # Required. Restrict who can push to this branch. Team and user restrictions are only available for organization-owned repositories. Set to null to disable.
+@@ -64,10 +65,10 @@ branches:
+# Labels: define labels for Issues and Pull Requests
+labels:
+  - name: duplicate
+    color: cde6ff
+    color: '156fad'
+    description: This Issue or Pull Request already exists
+  - name: good first issue
+    color: 6bb7fb
+    color: '6bb7fb'
+    description: Good for newcomers
+    aliases:
+    - beginner-friendly
+@@ -78,127 +79,83 @@ labels:
+    - starter-issue
+    - starter
+  - name: help wanted
+    color: 2492eb
+    color: '6bb7fb'
+    description: Extra attention is needed, this user requires assistance to complete
+      the work
+  - name: 'Project: Version Zero'
+    color: '222222'
+    description: Issues related to the epic Project Zero
+  - name: 'Project: Auro User Definition'
+    color: '222222'
+    description: Issues related to the epic User Research
+  - name: 'Project: Doc Site Strategy'
+    color: '222222'
+    description: Issues related to the epic Doc Site Strategy
+  - name: released
+    color: A9A9A9
+    color: 'A9A9A9'
+    description: Completed work has been released
+  - name: 'Status: Backlogged'
+    color: e2ffcd
+    description: Backlogged item is a proposed question or solution, the user is requesting
+      feedback
+    aliases:
+    - idea
+    - Idea
+    - proposal
+    - Proposal
+    - discussion
+  - name: 'Status: Prioritized for work'
+    color: d0fba6
+    description: Proposal has been prioritized for development (issues only)
+  - name: 'Status: Work In Progress'
+    description: Issue or Pull Request work is in Progress
+    color: c0e585
+    color: 'c0e585'
+  - name: 'Status: Review Needed'
+    color: 91be62
+    color: 'c0e585'
+    description: Work is completed, user is requesting feedback
+  - name: 'Status: Complete'
+    color: 5e8741
+    color: 'c0e585'
+    description: Owner has completed work and considers it ready to be merged
+  - name: 'Status: Blocked'
+    color: df0b37
+    color: 'df0b37'
+    description: Progress on the issue is Blocked, immediate attention is required
+    aliases:
+    - blocked
+  - name: 'Status: Discovery'
+    color: c1daf0
+    description: New work that is still in a discovery phase
+  - name: 'Status: PR Welcome'
+    color: 569ed7
+    description: Assigned to issues, requesting general public support
+    aliases:
+    - Patch Welcome
+    - 'Status: Ready for PR'
+  - name: 'Status: Abandoned'
+    color: 156fad
+    description: The issue or Pull Request is wontfix
+  - name: 'Abandoned'
+    color: '156fad'
+    description: The author of this issue or Pull Request is not responding
+    aliases:
+    - wontfix
+    - invalid
+  - name: 'Type: Bug'
+    color: df0b37
+    color: 'df0b37'
+    description: Bug or Bug fixes
+    aliases:
+    - bug
+  - name: 'Type: Breaking Change'
+    color: b88624
+    description: Includes breaking changes, will require MAJOR version release
+    aliases:
+    - breaking
+    - breaking-change
+  - name: 'Type: Feature'
+    color: e5ad07
+    color: 'ffd200'
+    description: New Feature
+    aliases:
+    - enhancement
+  - name: 'Type: Design'
+    color: e5ad07
+    color: 'ffd200'
+    description: New Design
+    aliases:
+    - enhancement
+  - name: 'Type: Content/data'
+    color: ffd200
+    description: Adding or editing new content or data to the repo
+  - name: 'Type: Content'
+    color: 'ffd200'
+    description: Adding or editing content
+    aliases:
+    - enhancement
+  - name: 'Type: Refactoring'
+    color: ffdb67
+    color: 'ffd200'
+    description: A code change that neither fixes a bug nor adds a feature
+    aliases:
+    - refactor
+  - name: 'Type: Testing'
+    color: fff0cd
+    description: Adding missing tests or correcting existing tests
+    aliases:
+    - test
+    - testing
+  - name: 'Type: Documentation'
+    color: f26135
+    color: 'ffd200'
+    description: Documentation only changes
+    aliases:
+    - documents
+    - document
+  - name: 'Type: Maintenance'
+    color: b83302
+    description: Repository Maintenance
+    aliases:
+    - greenkeeper
+    - maintenance
+  - name: 'Type: CI'
+    color: b83302
+    color: 'ffd200'
+    description: Changes to CI configuration files and scripts
+    aliases:
+    - ci
+  - name: 'Type: Question'
+    color: b83302
+  - name: 'Type: Perf'
+    color: 'ffd200'
+    description: Performance update to existing code
+  - name: 'Question'
+    color: 'b83302'
+    description: Further information is requested
+    aliases:
+    - question
+  - name: 'Type: Dependencies'
+    color: b83302
+    color: 'ffd200'
+    description: Pull requests that update a dependency file
+    aliases:
+    - dependencies
+  - name: 'Type: High Risk'
+    color: b83302
+    description: Work is high risk, pay close attention to updates and tests
+  - name: 'Type: UI Update'
+    color: 'ffd200'
+    description: Changes to the user interface
+    aliases:
+    - dependencies
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
