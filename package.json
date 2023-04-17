@@ -22,7 +22,8 @@
   "license": "Apache-2.0",
   "dependencies": {
     "chalk": "^4.1.2",
-    "lit": "^2.7.2"
+    "lit": "^2.7.2",
+    "typescript": "^5.0.4"
   },
   "peerDependencies": {
     "@alaskaairux/design-tokens": "^3.5.0",
@@ -94,7 +95,7 @@
     ]
   },
   "scripts": {
-    "build": "npm-run-all build:sass sass:render cssLint dist:js bundler postinstall build:api",
+    "build": "npm-run-all build:sass sass:render cssLint dist:js bundler postinstall build:api types",
     "build:dev:assets": "npm-run-all build:sass:component postCss:component sass:render",
     "build:api": "wca analyze 'src/auro-badge.js' --outFiles docs/api.md",
     "build:watch": "nodemon -e scss,js --watch src --exec npm run build:dev:assets",
@@ -117,7 +118,8 @@
     "build:sass:demo": "sass ./demo/sass/ --output ./demo/css/",
     "build:sass:component": "sass --no-source-map src:src",
     "postCss:component": "node ./scripts/postCss.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "types": "tsc"
   },
   "husky": {
     "hooks": {
