@@ -63,6 +63,10 @@ branches:
 
 # Labels: define labels for Issues and Pull Requests
 labels:
+  - name: auro-badge
+    color: `fa23e4`
+    description:
+    process: Key filter for this repo
   - name: duplicate
     color: cde6ff
     description: This Issue or Pull Request already exists
