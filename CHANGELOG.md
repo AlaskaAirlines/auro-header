@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.5.5](https://github.com/AlaskaAirlines/auro-header/compare/v1.5.4...v1.5.5) (2023-04-18)
+
+
+### Bug Fixes
+
+* **resources:** update .npmignore ([ec53629](https://github.com/AlaskaAirlines/auro-header/commit/ec53629e383341a3a0e711f08163d0e55f7f92b8))
+
 ## [1.5.4](https://github.com/AlaskaAirlines/auro-header/compare/v1.5.3...v1.5.4) (2023-04-17)
 
 
