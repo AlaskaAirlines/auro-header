@@ -12,6 +12,6 @@ demo/css
 demo/sass
 coverage/
 
-# ignore src css
+# ignore src styles
 src/**/*.scss
 src/**/*.css
