@@ -24,7 +24,7 @@
     "lit": "^2.7.2"
   },
   "peerDependencies": {
-    "@alaskaairux/design-tokens": "^3.5.0",
+    "@alaskaairux/design-tokens": "^3.13.0",
     "@alaskaairux/webcorestylesheets": "^3.7.3"
   },
   "devDependencies": {
