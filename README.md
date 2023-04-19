@@ -68,11 +68,6 @@ Include the following example HTML code in the `<head>` element of your page.
 
 Both [Unpkg](https://www.unpkg.com/) and [JSDelivr](https://www.jsdelivr.com/) are free open source options that you can use. These are 3rd party resources and Auro is not responsible for their uptime. **Use at your own risk.** These bundle resources are included with the npm package, you are free to use any CDN resource that fits your needs.
 
-### polyfills.js
-
-The `polyfills.js` is packaged with this component, but **IT IS NOT NEEDED** to load a polyfill per component. The `polyfills.js` will work for all additional components added to the project.
-
-
 ## auro-header use cases
 
 The `<auro-header>` element should be used in situations where users may:
@@ -97,8 +92,6 @@ Please be sure to review the [contribution guidelines](https://github.com/Alaska
 ### Start development environment
 
 Once the project has been cloned to your local resource and you have installed all the dependencies you will need to open a shell session to run the **dev server**.
-
-**Peer dependency:** Please make sure Polymer is installed globally in order to run the Polymer server. See [Auro Stateless Component Development Details](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/TECH_DETAILS.md) for more information.
 
 ```bash
 $ npm i polymer-cli -g
