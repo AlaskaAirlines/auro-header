@@ -9,7 +9,6 @@ import { ifDefined } from 'lit/directives/if-defined.js';
 // Import touch detection lib
 import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
-import styleCssFixed from './style-fixed-css.js';
 
 /**
  * auro-header is a custom element to make using headers with the Auro Design System seamless and easy.
@@ -44,10 +43,7 @@ export class AuroHeader extends LitElement {
   }
 
   static get styles() {
-    return [
-      styleCss,
-      styleCssFixed
-    ]
+    return [styleCss]
   }
 
   /**
@@ -122,8 +118,7 @@ export class AuroHeader extends LitElement {
   }
 }
 
-/* istanbul ignore else */
-// define the name of the custom component
+// default internal definition
 if (!customElements.get("auro-header")) {
   customElements.define("auro-header", AuroHeader);
 }
