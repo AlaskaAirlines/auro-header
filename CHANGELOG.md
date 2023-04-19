@@ -1,5 +1,44 @@
 # Semantic Release Automated Changelog
 
+# [2.0.0](https://github.com/AlaskaAirlines/auro-header/compare/v1.5.5...v2.0.0) (2023-04-19)
+
+
+### Bug Fixes
+
+* misimport pathto 'lit' package in auro-header.js ([0536f41](https://github.com/AlaskaAirlines/auro-header/commit/0536f419f7fdb8271c5eb9222edfbf1a200d4532))
+
+
+### Documentation
+
+* **npm:** Update npm namespace [#70](https://github.com/AlaskaAirlines/auro-header/issues/70) ([663ad0f](https://github.com/AlaskaAirlines/auro-header/commit/663ad0f76c90cde357503ecc2deb1d9d1cd4f7d2))
+
+
+### Features
+
+* **typescript:** add typescript support [#68](https://github.com/AlaskaAirlines/auro-header/issues/68) ([9c76756](https://github.com/AlaskaAirlines/auro-header/commit/9c767563eaf41b34e89d29fe9ade1d6c5c44f0db))
+
+
+### Performance Improvements
+
+* **dev:** update run dev use single terminal [#65](https://github.com/AlaskaAirlines/auro-header/issues/65) ([0e37cf9](https://github.com/AlaskaAirlines/auro-header/commit/0e37cf9620f75ddc84f9a6ec5d3ae7c8da55ef75))
+* **es5:** Remove legacy es5 bundling resources [#61](https://github.com/AlaskaAirlines/auro-header/issues/61) ([a5fb346](https://github.com/AlaskaAirlines/auro-header/commit/a5fb346084d0949d331df833b2b0cdf1eadb94de))
+* **es5:** remove postinstall instrucions [#61](https://github.com/AlaskaAirlines/auro-header/issues/61) ([502cd66](https://github.com/AlaskaAirlines/auro-header/commit/502cd669da991caa2741892af685ab04cc9a8a6e))
+* **husky:** Pre-commit and husky update [#63](https://github.com/AlaskaAirlines/auro-header/issues/63) ([2568b60](https://github.com/AlaskaAirlines/auro-header/commit/2568b607b1c0b9597916fbd49cd108906763e32b))
+* **lit:** Update to Lit2.0 [#66](https://github.com/AlaskaAirlines/auro-header/issues/66) ([e9fa9ef](https://github.com/AlaskaAirlines/auro-header/commit/e9fa9ef5b429d4583ff9f5e769f9f66d279bcf14))
+* **node18:** Update to support node 18++ [#64](https://github.com/AlaskaAirlines/auro-header/issues/64) ([9419a4d](https://github.com/AlaskaAirlines/auro-header/commit/9419a4d31030cc235af78c7c4031198cfcdb39d9))
+* **postCss:** update to postCss.js & remove unused resource ([5e401a9](https://github.com/AlaskaAirlines/auro-header/commit/5e401a91a7bf1693491a371747c46e08386c739e))
+* **sass:** Update Sass to use dart-sass dependency [#62](https://github.com/AlaskaAirlines/auro-header/issues/62) ([1a26b20](https://github.com/AlaskaAirlines/auro-header/commit/1a26b2006f005a5000e8699d6054c172f32f0ffd))
+
+
+### BREAKING CHANGES
+
+* **npm:** This update will redefine the npm namespace
+for the auro-header element.
+
+Changes to be committed:
+modified:   README.md
+modified:   package.json
+
 ## [1.5.5](https://github.com/AlaskaAirlines/auro-header/compare/v1.5.4...v1.5.5) (2023-04-18)
 
 
