@@ -3,7 +3,7 @@
 
 // ---------------------------------------------------------------------
 
-import { LitElement, html } from "lit-element";
+import { LitElement, html } from "lit";
 import { ifDefined } from 'lit/directives/if-defined.js';
 
 // Import touch detection lib
