@@ -25,11 +25,11 @@
   },
   "peerDependencies": {
     "@alaskaairux/design-tokens": "^3.13.0",
-    "@alaskaairux/webcorestylesheets": "^3.7.3"
+    "@aurodesignsystem/webcorestylesheets": "^4.3.1"
   },
   "devDependencies": {
     "@alaskaairux/design-tokens": "^3.13.0",
-    "@alaskaairux/webcorestylesheets": "^3.7.3",
+    "@aurodesignsystem/webcorestylesheets": "^4.3.1",
     "@commitlint/cli": "^17.6.1",
     "@commitlint/config-conventional": "^17.6.1",
     "@open-wc/testing": "^3.1.8",
@@ -54,7 +54,6 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.22",
     "postcss-discard-comments": "^6.0.0",
-    "postcss-selector-replace": "^1.0.2",
     "rollup": "^3.20.6",
     "rollup-plugin-serve": "^2.0.2",
     "semantic-release": "^21.0.1",
@@ -63,7 +62,6 @@
     "typescript": "^5.0.4",
     "wc-sass-render": "^1.4.0",
     "web-component-analyzer": "^1.1.7",
-    "webpack-merge": "^5.8.0",
     "whatwg-fetch": "^3.6.2",
     "yaml-lint": "^1.7.0"
   },
