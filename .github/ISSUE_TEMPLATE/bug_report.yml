@@ -18,7 +18,7 @@ body:
     attributes:
       value: >
         [![See it on
-        NPM!](https://img.shields.io/npm/v/@alaskaairux/auro-header?style=for-the-header&color=orange)](https://www.npmjs.com/package/@alaskaairux/auro-header)
+        NPM!](https://img.shields.io/npm/v/@aurodesignsystem/auro-header?style=for-the-header&color=orange)](https://www.npmjs.com/package/@aurodesignsystem/auro-header)
   - type: textarea
     id: details
     attributes:
