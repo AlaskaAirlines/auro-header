@@ -99,7 +99,6 @@
     "test:watch": "wtr --watch",
     "build:sass": "npm-run-all build:sass:component postCss:component sass:render",
     "build:sass:dev": "npm-run-all build:sass:component postCss:component sass:render",
-    "build:sass:demo": "sass ./demo/sass/ --output ./demo/css/",
     "build:sass:component": "sass --no-source-map src:src",
     "postCss:component": "node ./scripts/postCss.js",
     "prepare": "husky install",
