@@ -20,7 +20,7 @@
   "main": "index.js",
   "license": "Apache-2.0",
   "dependencies": {
-    "chalk": "^4.1.2",
+    "chalk": "^5.2.0",
     "lit": "^2.7.2"
   },
   "peerDependencies": {
@@ -86,8 +86,7 @@
     "bundler": "rollup -c",
     "bundle:test": "rollup -c -w",
     "serve": "web-dev-server --open demo/ --node-resolve --watch",
-    "postinstall": "node packageScripts/postinstall.js",
-    "postinstall:lit": "node scripts/postinstall.js",
+    "postinstall": "node packageScripts/postinstall.mjs",
     "cssLint": "stylelint './src/*.css'",
     "dev": "concurrently --kill-others 'npm run build:watch' 'npm run serve'",
     "dist:js": "copyfiles -u 1 -V './src/**/*.js' ./dist",
