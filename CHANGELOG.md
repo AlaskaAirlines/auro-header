@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.0.1](https://github.com/AlaskaAirlines/auro-header/compare/v2.0.0...v2.0.1) (2023-06-05)
+
+
+### Performance Improvements
+
+* update to gitignore & npmignore file [#97](https://github.com/AlaskaAirlines/auro-header/issues/97) ([70e6b7e](https://github.com/AlaskaAirlines/auro-header/commit/70e6b7e61fbf81bedf9ce6e5358a056a432f5973))
+
 # [2.0.0](https://github.com/AlaskaAirlines/auro-header/compare/v1.5.5...v2.0.0) (2023-04-19)
 
 
