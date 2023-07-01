@@ -28,7 +28,7 @@
     "@aurodesignsystem/webcorestylesheets": "^4.3.1"
   },
   "devDependencies": {
-    "@alaskaairux/design-tokens": "^3.13.0",
+    "@alaskaairux/design-tokens": "^3.14.0",
     "@aurodesignsystem/webcorestylesheets": "^4.3.1",
     "@commitlint/cli": "^17.6.1",
     "@commitlint/config-conventional": "^17.6.1",
