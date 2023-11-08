@@ -19,7 +19,7 @@ The auro-header will default to the h1 element with the `header--display` style.
   <auro-header>Hello World!</auro-header>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -34,7 +34,7 @@ Changing the header level does not change the header style. This example will ou
   <auro-header level="3">Hello World!</auro-header>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -49,7 +49,7 @@ Or vice-versa. This example will output an h1 header element with the `header--8
   <auro-header display="800">Hello World!</auro-header>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -64,7 +64,7 @@ Or vice-versa. This example will output an h1 header element with the `header--8
   <auro-header level="2" display="700">Hello World!</auro-header>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -77,7 +77,7 @@ Or vice-versa. This example will output an h1 header element with the `header--8
   <auro-header level="2" display="600">Hello World!</auro-header>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -90,7 +90,7 @@ Or vice-versa. This example will output an h1 header element with the `header--8
   <auro-header level="3" display="500">Hello World!</auro-header>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -103,7 +103,7 @@ Or vice-versa. This example will output an h1 header element with the `header--8
   <auro-header level="5" display="400">Hello World!</auro-header>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -128,7 +128,7 @@ Also note the use of the  util_stackMarginNone--top  utility selector on the ol 
   </ol>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -151,7 +151,7 @@ The following example shows how you can update `both` margins to use the `xl` si
   </ol>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -174,7 +174,7 @@ If there is a CSS selector that has the color definition you want to use with th
   </div>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -195,7 +195,7 @@ If it's preferred not to wrap the header component in another element, use the `
   </auro-header>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -218,7 +218,7 @@ This feature should only to be used within environments where the REM values can
   </auro-header>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -246,7 +246,7 @@ This will create a new custom element that you can use in your HTML that will fu
   <custom-header display="display">Salutations World!</custom-header>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
