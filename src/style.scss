@@ -4,16 +4,16 @@
 // ---------------------------------------------------------------------
 
 // Import Auro tokens
-@import "./../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables";
-@import "./../node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties";
+@import "./../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables";
+@import "./../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SassCustomProperties";
 
-@import "./../node_modules/@aurodesignsystem/webcorestylesheets/dist/breakpoints";
-@import "./../node_modules/@aurodesignsystem/webcorestylesheets/dist/core";
-@import "./../node_modules/@aurodesignsystem/webcorestylesheets/dist/headings";
+@import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints";
+@import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/core";
+@import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/headings";
 
 $auro-spacing-types: stack;
 @import "./../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariableMap";
-@import "./../node_modules/@aurodesignsystem/webcorestylesheets/dist/utilityMixins/spacingUtility";
+@import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/utilityMixins/spacingUtility";
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 
@@ -25,89 +25,89 @@ $auro-spacing-types: stack;
 // in legacy UIs where hard-px values are needed.
 :host([type=px]) {
   .heading--display {
-    font-size: var(--auro-text-heading-display-px-breakpoint-sm);
-    line-height: var(--auro-text-heading-display-height-breakpoint-px-sm);
+    font-size: var(--ds-text-heading-display-px-breakpoint-sm, $ds-text-heading-display-px-breakpoint-sm);
+    line-height: var(--ds-text-heading-display-height-breakpoint-px-sm, $ds-text-heading-display-height-breakpoint-px-sm);
 
     @include auro_breakpoint--md {
-      font-size: var(--auro-text-heading-display-px-breakpoint-md);
-      line-height: var(--auro-text-heading-display-height-breakpoint-px-sm);
+      font-size: var(--ds-text-heading-display-px-breakpoint-md, $ds-text-heading-display-px-breakpoint-md);
+      line-height: var(--ds-text-heading-display-height-breakpoint-px-sm, $ds-text-heading-display-height-breakpoint-px-sm);
     }
 
     @include auro_breakpoint--lg {
-      font-size: var(--auro-text-heading-display-px-breakpoint-lg);
-      line-height: var(--auro-text-heading-display-height-breakpoint-px-lg);
+      font-size: var(--ds-text-heading-display-px-breakpoint-lg, $ds-text-heading-display-px-breakpoint-lg);
+      line-height: var(--ds-text-heading-display-height-breakpoint-px-lg, $ds-text-heading-display-height-breakpoint-px-lg);
     }
   }
 
   .heading--800 {
-    font-size: var(--auro-text-heading-800-px-breakpoint-sm);
-    line-height: var(--auro-text-heading-800-height-breakpoint-px-sm);
+    font-size: var(--ds-text-heading-800-px-breakpoint-sm, $ds-text-heading-800-px-breakpoint-sm);
+    line-height: var(--ds-text-heading-800-height-breakpoint-px-sm, $ds-text-heading-800-height-breakpoint-px-sm);
 
     @include auro_breakpoint--md {
-      font-size: var(--auro-text-heading-800-px-breakpoint-md);
-      line-height: var(--auro-text-heading-800-height-breakpoint-px-md);
+      font-size: var(--ds-text-heading-800-px-breakpoint-md, $ds-text-heading-800-px-breakpoint-md);
+      line-height: var(--ds-text-heading-800-height-breakpoint-px-md, $ds-text-heading-800-height-breakpoint-px-md);
     }
 
     @include auro_breakpoint--lg {
-      font-size: var(--auro-text-heading-800-px-breakpoint-lg);
-      line-height: var(--auro-text-heading-800-height-breakpoint-px-lg);
+      font-size: var(--ds-text-heading-800-px-breakpoint-lg, $ds-text-heading-800-px-breakpoint-lg);
+      line-height: var(--ds-text-heading-800-height-breakpoint-px-lg, $ds-text-heading-800-height-breakpoint-px-lg);
     }
   }
 
   .heading--700 {
-    font-size: var(--auro-text-heading-700-px-breakpoint-sm);
-    line-height: var(--auro-text-heading-700-height-breakpoint-px-sm);
+    font-size: var(--ds-text-heading-700-px-breakpoint-sm, $ds-text-heading-700-px-breakpoint-sm);
+    line-height: var(--ds-text-heading-700-height-breakpoint-px-sm, $ds-text-heading-700-height-breakpoint-px-sm);
 
     @include auro_breakpoint--md {
-      font-size: var(--auro-text-heading-700-px-breakpoint-md);
-      line-height: var(--auro-text-heading-700-height-breakpoint-px-md);
+      font-size: var(--ds-text-heading-700-px-breakpoint-md, $ds-text-heading-700-px-breakpoint-md);
+      line-height: var(--ds-text-heading-700-height-breakpoint-px-md, $ds-text-heading-700-height-breakpoint-px-md);
     }
 
     @include auro_breakpoint--lg {
-      font-size: var(--auro-text-heading-700-px-breakpoint-lg);
-      line-height: var(--auro-text-heading-700-height-breakpoint-px-lg);
+      font-size: var(--ds-text-heading-700-px-breakpoint-lg, $ds-text-heading-700-px-breakpoint-lg);
+      line-height: var(--ds-text-heading-700-height-breakpoint-px-lg, $ds-text-heading-700-height-breakpoint-px-lg);
     }
   }
 
   .heading--600 {
-    font-size: var(--auro-text-heading-600-px-breakpoint-sm);
-    line-height: var(--auro-text-heading-600-height-breakpoint-px-sm);
+    font-size: var(--ds-text-heading-600-px-breakpoint-sm, $ds-text-heading-600-px-breakpoint-sm);
+    line-height: var(--ds-text-heading-600-height-breakpoint-px-sm, $ds-text-heading-600-height-breakpoint-px-sm);
     margin: 16px 0;
 
     @include auro_breakpoint--md {
-      font-size: var(--auro-text-heading-600-px-breakpoint-md);
-      line-height: var(--auro-text-heading-600-height-breakpoint-px-md);
+      font-size: var(--ds-text-heading-600-px-breakpoint-md, $ds-text-heading-600-px-breakpoint-md);
+      line-height: var(--ds-text-heading-600-height-breakpoint-px-md, $ds-text-heading-600-height-breakpoint-px-md);
     }
 
     @include auro_breakpoint--lg {
-      line-height: var(--auro-text-heading-600-height-breakpoint-px-lg);
+      line-height: var(--ds-text-heading-600-height-breakpoint-px-lg, $ds-text-heading-600-height-breakpoint-px-lg);
     }
   }
 
   .heading--500 {
-    font-size: var(--auro-text-heading-500-px-breakpoint-sm);
-    line-height: var(--auro-text-heading-500-height-breakpoint-px-sm);
+    font-size: var(--ds-text-heading-500-px-breakpoint-sm, $ds-text-heading-500-px-breakpoint-sm);
+    line-height: var(--ds-text-heading-500-height-breakpoint-px-sm, $ds-text-heading-500-height-breakpoint-px-sm);
     margin: 16px 0;
 
     @include auro_breakpoint--md {
-      font-size: var(--auro-text-heading-500-px-breakpoint-md);
-      line-height: var(--auro-text-heading-500-height-breakpoint-px-md);
+      font-size: var(--ds-text-heading-500-px-breakpoint-md, $ds-text-heading-500-px-breakpoint-md);
+      line-height: var(--ds-text-heading-500-height-breakpoint-px-md, $ds-text-heading-500-height-breakpoint-px-md);
     }
 
     @include auro_breakpoint--lg {
-      line-height: var(--auro-text-heading-500-height-breakpoint-px-lg);
+      line-height: var(--ds-text-heading-500-height-breakpoint-px-lg, $ds-text-heading-500-height-breakpoint-px-lg);
     }
   }
 
   .heading--400 {
-    font-size: var(--auro-text-heading-400-px);
-    line-height: var(--auro-text-heading-400-height-px);
+    font-size: var(--ds-text-heading-400-px, $ds-text-heading-400-px);
+    line-height: var(--ds-text-heading-400-height-px, $ds-text-heading-400-height-px);
     margin: 12px 0;
   }
 
   .heading--300 {
-    font-size: var(--auro-text-heading-300-px);
-    line-height: var(--auro-text-heading-300-height-px);
+    font-size: var(--ds-text-heading-300-px, $ds-text-heading-300-px);
+    line-height: var(--ds-text-heading-300-height-px, $ds-text-heading-300-height-px);
     margin: 12px 0;
   }
 }
