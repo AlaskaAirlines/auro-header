@@ -116,12 +116,12 @@ Or vice-versa. This example will output an h1 header element with the `header--8
 
 In some cases the margin between elements may need to be adjusted. To do this, the `auro-header` component supports adjusting either the `top`, `bottom` or `both` margins. This coupled with the `size` prop, developers have a [full range of options](https://auro.alaskaair.com/components/auro/header/api).
 
-The following example shows how you can update the `bottom` margin to use the `xs` size setting.
+The following example shows how you can update the `bottom` margin to use the `50` size setting.
 
 Also note the use of the  util_stackMarginNone--top  utility selector on the ol from [Web Core Style Sheets](https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-layout-mixin-auro_spacing).
 
 <div class="exampleWrapper">
-  <auro-header level="2" display="500" margin="bottom" size="xs">Hello World!</auro-header>
+  <auro-header level="2" display="500" margin="bottom" size="50">Hello World!</auro-header>
   <ol className="util_stackMarginNone--top">
     <li>... thing</li>
     <li>thing ...</li>
@@ -132,7 +132,7 @@ Also note the use of the  util_stackMarginNone--top  utility selector on the ol 
   <span slot="trigger">See code</span>
 
   ```html
-  <auro-header level="2" display="500" margin="bottom" size="xs">Hello World!</auro-header>
+  <auro-header level="2" display="500" margin="bottom" size="50">Hello World!</auro-header>
   <ol className="util_stackMarginNone--top">
     <li>... thing</li>
     <li>thing ...</li>
@@ -141,10 +141,10 @@ Also note the use of the  util_stackMarginNone--top  utility selector on the ol 
 
 </auro-accordion>
 
-The following example shows how you can update `both` margins to use the `xl` size setting.
+The following example shows how you can update `both` margins to use the `400` size setting.
 
 <div class="exampleWrapper">
-  <auro-header level="2" display="500" margin="both" size="xl">Hello World!</auro-header>
+  <auro-header level="2" display="500" margin="both" size="400">Hello World!</auro-header>
   <ol className="util_stackMarginNone--top">
     <li>... thing</li>
     <li>thing ...</li>
@@ -155,7 +155,7 @@ The following example shows how you can update `both` margins to use the `xl` si
   <span slot="trigger">See code</span>
 
   ```html
-  <auro-header level="2" display="500" margin="both" size="xl">Hello World!</auro-header>
+  <auro-header level="2" display="500" margin="both" size="400">Hello World!</auro-header>
   <ol className="util_stackMarginNone--top">
     <li>... thing</li>
     <li>thing ...</li>

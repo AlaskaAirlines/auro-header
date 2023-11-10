@@ -5,14 +5,13 @@
 
 // Import Auro tokens
 @import "./../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables";
-@import "./../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SassCustomProperties";
 
 @import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints";
 @import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/core";
 @import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/headings";
 
 $auro-spacing-types: stack;
-@import "./../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariableMap";
+@import "./../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariableMap";
 @import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/utilityMixins/spacingUtility";
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
@@ -72,7 +71,7 @@ $auro-spacing-types: stack;
   .heading--600 {
     font-size: var(--ds-text-heading-600-px-breakpoint-sm, $ds-text-heading-600-px-breakpoint-sm);
     line-height: var(--ds-text-heading-600-height-breakpoint-px-sm, $ds-text-heading-600-height-breakpoint-px-sm);
-    margin: 16px 0;
+    margin: var(--ds-size-200) 0;
 
     @include auro_breakpoint--md {
       font-size: var(--ds-text-heading-600-px-breakpoint-md, $ds-text-heading-600-px-breakpoint-md);
@@ -102,27 +101,37 @@ $auro-spacing-types: stack;
   .heading--400 {
     font-size: var(--ds-text-heading-400-px, $ds-text-heading-400-px);
     line-height: var(--ds-text-heading-400-height-px, $ds-text-heading-400-height-px);
-    margin: 12px 0;
+    margin: var(--ds-size-150) 0;
   }
 
   .heading--300 {
     font-size: var(--ds-text-heading-300-px, $ds-text-heading-300-px);
     line-height: var(--ds-text-heading-300-height-px, $ds-text-heading-300-height-px);
-    margin: 12px 0;
+    margin: var(--ds-size-150) 0;
   }
 }
 
+// Legacy mappings were kept for backwards compatibility
 $size-map: (
   "none": 0,
-  "Xxxs": 2px,
-  "Xxs": 4px,
-  "Xs": 8px,
-  "Sm": 12px,
-  "Md": 16px,
-  "Lg": 24px,
-  "Xl": 32px,
-  "Xxl": 48px,
-  "Xxxl": 64px
+  "25": var(--ds-size-25, $ds-size-25),
+  "50": var(--ds-size-50, $ds-size-50),
+  "100": var(--ds-size-100, $ds-size-100),
+  "150": var(--ds-size-150, $ds-size-150),
+  "200": var(--ds-size-200, $ds-size-200),
+  "300": var(--ds-size-300, $ds-size-300),
+  "400": var(--ds-size-400, $ds-size-400),
+  "600": var(--ds-size-600, $ds-size-600),
+  "800": var(--ds-size-800, $ds-size-800),
+  "Xxxs": var(--ds-size-25, $ds-size-25),
+  "Xxs": var(--ds-size-50, $ds-size-50),
+  "Xs": var(--ds-size-100, $ds-size-100),
+  "Sm": var(--ds-size-150, $ds-size-150),
+  "Md": var(--ds-size-200, $ds-size-200),
+  "Lg": var(--ds-size-300, $ds-size-300),
+  "Xl": var(--ds-size-400, $ds-size-400),
+  "Xxl": var(--ds-size-600, $ds-size-600),
+  "Xxxl": var(--ds-size-800, $ds-size-800)
 );
 
 @each $name, $size in $size-map {
