@@ -11,7 +11,7 @@
   "description": "Auro custom auro-header element",
   "author": "Product design and research",
   "engines": {
-    "node": ">=18.15.0"
+    "node": "^18 || ^20"
   },
   "repository": {
     "type": "git",
