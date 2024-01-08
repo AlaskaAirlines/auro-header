@@ -28,12 +28,11 @@
     "@aurodesignsystem/webcorestylesheets": "^5.0.2"
   },
   "devDependencies": {
+    "@aurodesignsystem/design-tokens": "^4.1.1",
     "@aurodesignsystem/webcorestylesheets": "^5.0.2",
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
     "@open-wc/testing": "^4.0.0",
-    "@aurodesignsystem/design-tokens": "^4.1.1",
-    "@open-wc/testing-karma": "^4.0.9",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
@@ -56,6 +55,7 @@
     "postcss-discard-comments": "^6.0.1",
     "rollup": "^4.9.4",
     "rollup-plugin-serve": "^2.0.2",
+    "sass": "^1.69.7",
     "semantic-release": "^22.0.12",
     "stylelint": "^16.1.0",
     "stylelint-config-standard": "^36.0.0",
@@ -64,6 +64,11 @@
     "web-component-analyzer": "^2.0.0",
     "whatwg-fetch": "^3.6.20",
     "yaml-lint": "^1.7.0"
+  },
+  "overrides": {
+    "wc-sass-render": {
+      "sass": "$sass"
+    }
   },
   "browserslist": [
     "last 2 Chrome versions",
