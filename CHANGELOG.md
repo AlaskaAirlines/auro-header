@@ -1,5 +1,18 @@
 # Semantic Release Automated Changelog
 
+# [2.1.0](https://github.com/AlaskaAirlines/auro-header/compare/v2.0.1...v2.1.0) (2024-01-08)
+
+
+### Features
+
+* update adjustable margin API ([407dd9d](https://github.com/AlaskaAirlines/auro-header/commit/407dd9dd8167a22d5b95350f30bb417cba72785b))
+
+
+### Performance Improvements
+
+* update to support new Node policy ([5b76187](https://github.com/AlaskaAirlines/auro-header/commit/5b76187cd8ea3c11c3b9215aec3841d3a444a944))
+* update tokens per new theme spec [#44](https://github.com/AlaskaAirlines/auro-header/issues/44) ([f822501](https://github.com/AlaskaAirlines/auro-header/commit/f8225012dc7594fb38f8787d5b645823aacf19c6))
+
 ## [2.0.1](https://github.com/AlaskaAirlines/auro-header/compare/v2.0.0...v2.0.1) (2023-06-05)
 
 
