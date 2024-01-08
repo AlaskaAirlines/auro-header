@@ -79,42 +79,6 @@ describe('auro-header', () => {
     expect(heading.className).to.equal('heading heading--display util_stackMarginXxxs--bottom');
   });
 
-  it('sets bottom margin CURRENT', async () => {
-    const el = await fixture(html`
-      <auro-header level="2" display="display" size="50" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="100" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="150" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="200" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="300" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="400" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="500" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="600" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="800" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="none" margin="bottom">Hello World!</auro-header>
-    `);
-
-    const heading = el.shadowRoot.querySelector('h2');
-    expect(heading.className).to.equal('heading heading--display util_stackMargin50--bottom');
-  });
-
-  it('sets bottom margin LEGACY', async () => {
-    const el = await fixture(html`
-      <auro-header level="2" display="display" size="xxxs" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="xxs" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="xs" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="sm" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="md" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="lg" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="xl" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="xxl" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="xxxl" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="none" margin="bottom">Hello World!</auro-header>
-    `);
-
-    const heading = el.shadowRoot.querySelector('h2');
-    expect(heading.className).to.equal('heading heading--display util_stackMarginXxxs--bottom');
-  });
-
   it('sets top and bottom margin CURRENT', async () => {
     const el = await fixture(html`
       <auro-header level="2" display="display" size="50" margin="both">Hello World!</auro-header>

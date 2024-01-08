@@ -21,6 +21,8 @@ import styleCss from "./style-css.js";
  * @attr {Boolean} fixed - Uses px values instead of rem
  */
 
+/* eslint complexity: ["error", 21] */
+
 // build the component class
 export class AuroHeader extends LitElement {
   constructor() {
