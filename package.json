@@ -17,6 +17,7 @@
     "type": "git",
     "url": "https://github.com/AlaskaAirlines/auro-header"
   },
+  "type": "module",
   "main": "index.js",
   "license": "Apache-2.0",
   "dependencies": {
@@ -28,6 +29,7 @@
     "@aurodesignsystem/webcorestylesheets": "^5.0.2"
   },
   "devDependencies": {
+    "@aurodesignsystem/auro-library": "^2.2.6",
     "@aurodesignsystem/design-tokens": "^4.1.1",
     "@aurodesignsystem/webcorestylesheets": "^5.0.2",
     "@commitlint/cli": "^18.4.4",
@@ -105,7 +107,7 @@
     "build:sass": "npm-run-all build:sass:component postCss:component sass:render",
     "build:sass:dev": "npm-run-all build:sass:component postCss:component sass:render",
     "build:sass:component": "sass --no-source-map src:src",
-    "postCss:component": "node ./scripts/postCss.js",
+    "postCss:component": "node ./scripts/postCss.mjs",
     "prepare": "husky install",
     "types": "tsc"
   },
