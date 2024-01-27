@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.2.1](https://github.com/AlaskaAirlines/auro-header/compare/v2.2.0...v2.2.1) (2024-01-27)
+
+
+### Performance Improvements
+
+* update index per SSR support ([02f3f54](https://github.com/AlaskaAirlines/auro-header/commit/02f3f54464150dcef295ca04f27d88e4b11266e4))
+
 # [2.2.0](https://github.com/AlaskaAirlines/auro-header/compare/v2.1.0...v2.2.0) (2024-01-21)
 
 
