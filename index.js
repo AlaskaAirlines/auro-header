@@ -1,4 +1,4 @@
-import { AuroHeader } from './src/auro-header';
+import { AuroHeader } from './src/auro-header.js';
 
 /**
  * Register Custom Element.
