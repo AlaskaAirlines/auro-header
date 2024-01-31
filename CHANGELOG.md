@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [2.2.2](https://github.com/AlaskaAirlines/auro-header/compare/v2.2.1...v2.2.2) (2024-01-31)
+
+
+### Performance Improvements
+
+* alaskaairux ref updates ([26ef7be](https://github.com/AlaskaAirlines/auro-header/commit/26ef7be221acc3d2ed557084db091e45b75ce733))
+* **cdn:** update links from unpkg to jsdelivr ([79eedb5](https://github.com/AlaskaAirlines/auro-header/commit/79eedb57c28ac591f42b280cf4493d73f25c5c6b))
+
 ## [2.2.1](https://github.com/AlaskaAirlines/auro-header/compare/v2.2.0...v2.2.1) (2024-01-27)
 
 
