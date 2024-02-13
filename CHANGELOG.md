@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+## [2.2.3](https://github.com/AlaskaAirlines/auro-header/compare/v2.2.2...v2.2.3) (2024-02-13)
+
+
+### Bug Fixes
+
+* address broken build step ([b13710b](https://github.com/AlaskaAirlines/auro-header/commit/b13710bd65ea8e9d895e0064be4a262cd08431f8))
+
+
+### Performance Improvements
+
+* update auro dependencies ([dfa3f87](https://github.com/AlaskaAirlines/auro-header/commit/dfa3f8773837454366a75a78150e3c3bd002a844))
+
 ## [2.2.2](https://github.com/AlaskaAirlines/auro-header/compare/v2.2.1...v2.2.2) (2024-01-31)
 
 
