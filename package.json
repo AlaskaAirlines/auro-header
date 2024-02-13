@@ -29,9 +29,9 @@
     "@aurodesignsystem/webcorestylesheets": "^5.0.2"
   },
   "devDependencies": {
-    "@aurodesignsystem/auro-library": "^2.2.6",
+    "@aurodesignsystem/auro-library": "^2.5.1",
     "@aurodesignsystem/design-tokens": "^4.1.1",
-    "@aurodesignsystem/webcorestylesheets": "^5.0.2",
+    "@aurodesignsystem/webcorestylesheets": "^5.0.8",
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
     "@open-wc/testing": "^4.0.0",
