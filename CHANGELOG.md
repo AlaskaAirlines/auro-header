@@ -1,5 +1,14 @@
 # Semantic Release Automated Changelog
 
+## [2.2.4](https://github.com/AlaskaAirlines/auro-header/compare/v2.2.3...v2.2.4) (2024-02-19)
+
+
+### Performance Improvements
+
+* **demo:** update demo file structure [#116](https://github.com/AlaskaAirlines/auro-header/issues/116) ([bc47d06](https://github.com/AlaskaAirlines/auro-header/commit/bc47d067cdb63284efa2cde7c55292dcf64ffe7e))
+* **release:** fix branch name for semantic release ([2d7f62c](https://github.com/AlaskaAirlines/auro-header/commit/2d7f62cbacf4800f264799e182af1e4372317c71))
+* **styles:** update scss file to fix style issues ([c5b83ed](https://github.com/AlaskaAirlines/auro-header/commit/c5b83ed8e99f73ae44f9ef77bce1cbbbf5789d01))
+
 ## [2.2.3](https://github.com/AlaskaAirlines/auro-header/compare/v2.2.2...v2.2.3) (2024-02-13)
 
 
