@@ -3,7 +3,7 @@
 
 # auro-header
 
-auro-header is a custom element to make using headers with the Auro Design System seamless and easy.
+The auro-header component is a custom element to make using headers with the Auro Design System seamless and easy.
 
 ## Attributes
 

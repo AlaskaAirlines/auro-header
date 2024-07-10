@@ -7,7 +7,7 @@
     "================================================================================"
   ],
   "name": "@aurodesignsystem/auro-header",
-  "version": "2.2.4",
+  "version": "2.2.5-beta.1",
   "description": "auro-header HTML custom element",
   "repository": {
     "type": "git",
