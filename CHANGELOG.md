@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [2.3.0](https://github.com/AlaskaAirlines/auro-header/compare/v2.2.5...v2.3.0) (2024-09-17)
+
+
+### Features
+
+* add tag name as attribute functionality [#123](https://github.com/AlaskaAirlines/auro-header/issues/123) ([697e709](https://github.com/AlaskaAirlines/auro-header/commit/697e70925713648f8479c37ea249632ff0a7acab))
+
 ## [2.2.5](https://github.com/AlaskaAirlines/auro-header/compare/v2.2.4...v2.2.5) (2024-09-17)
 
 
