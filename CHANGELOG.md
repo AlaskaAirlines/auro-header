@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [2.2.5](https://github.com/AlaskaAirlines/auro-header/compare/v2.2.4...v2.2.5) (2024-09-17)
+
+
+### Performance Improvements
+
+* **styles:** remove unnecessary sass imports that cause bloat ([bcb618d](https://github.com/AlaskaAirlines/auro-header/commit/bcb618d964ed9ea4c2f3bd4b1b8acc0abb3eaf53))
+* update eslint config and dependencies ([693c70c](https://github.com/AlaskaAirlines/auro-header/commit/693c70c0a7f5704574afe41eac92a951e288cfea))
+
 ## [2.2.5-beta.1](https://github.com/AlaskaAirlines/auro-header/compare/v2.2.4...v2.2.5-beta.1) (2024-07-10)
 
 
