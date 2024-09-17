@@ -6,6 +6,8 @@
 import { LitElement, html } from "lit";
 import { ifDefined } from 'lit/directives/if-defined.js';
 
+import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
+
 // Import touch detection lib
 import styleCss from "./style-css.js";
 
@@ -29,6 +31,11 @@ export class AuroHeader extends LitElement {
     super();
 
     this.display = 'display';
+
+    /**
+     * @private
+     */
+    this.runtimeUtils = new AuroLibraryRuntimeUtils();
   }
 
   // function to define props used within the scope of this component
@@ -47,6 +54,11 @@ export class AuroHeader extends LitElement {
 
   static get styles() {
     return [styleCss];
+  }
+
+  firstUpdated() {
+    // Add the tag name as an attribute if it is different than the component name
+    this.runtimeUtils.handleComponentTagRename(this, 'auro-header');
   }
 
   /**
