@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [2.4.0](https://github.com/AlaskaAirlines/auro-header/compare/v2.3.1...v2.4.0) (2024-10-21)
+
+
+### Features
+
+* **api:** add register static method [#127](https://github.com/AlaskaAirlines/auro-header/issues/127) ([8f6e9b1](https://github.com/AlaskaAirlines/auro-header/commit/8f6e9b14936cec3747faadc3c6fa1cd4802f6509))
+
 ## [2.3.1](https://github.com/AlaskaAirlines/auro-header/compare/v2.3.0...v2.3.1) (2024-10-08)
 
 
