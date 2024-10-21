@@ -56,6 +56,18 @@ export class AuroHeader extends LitElement {
     return [styleCss];
   }
 
+  /**
+   * This will register this element with the browser.
+   * @param {string} [name="auro-header"] - The name of element that you want to register to.
+   *
+   * @example
+   * AuroHeader.register("custom-header") // this will register this element to <custom-header/>
+   *
+   */
+  static register(name = "auro-header") {
+    AuroLibraryRuntimeUtils.prototype.registerComponent(name, AuroHeader);
+  }
+
   firstUpdated() {
     // Add the tag name as an attribute if it is different than the component name
     this.runtimeUtils.handleComponentTagRename(this, 'auro-header');
@@ -152,9 +164,4 @@ export class AuroHeader extends LitElement {
   render() {
     return this.template(this.level);
   }
-}
-
-// default internal definition
-if (!customElements.get("auro-header")) {
-  customElements.define("auro-header", AuroHeader);
 }

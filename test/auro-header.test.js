@@ -1,5 +1,5 @@
 import { fixture, html, expect } from '@open-wc/testing';
-import '../src/auro-header';
+import '../index';
 
 describe('auro-header', () => {
   it('sets the CSS class on auro-header', async () => {
