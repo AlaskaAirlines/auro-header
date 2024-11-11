@@ -6,8 +6,8 @@ This file is generated based on a template fetched from `./docs/partials/index.m
 
 # Header
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./description.md) -->
-<!-- The below content is automatically added from ./description.md -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../docs/partials/description.md) -->
+<!-- The below content is automatically added from ../docs/partials/description.md -->
 The `<auro-header>` component is a simple component for rendering page or content headers without having to deal with font styling. Simply choose the level of the header want and the style type.
 
 The auro-header component is able to take any combination of options for heading levels and display options. See [Auro's header usage guidlines](https://auro.alaskaair.com/typography/usage) for additional examples sans web component dependency.
@@ -15,8 +15,8 @@ The auro-header component is able to take any combination of options for heading
 
 ## auro-header use cases
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./useCases.md) -->
-<!-- The below content is automatically added from ./useCases.md -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../docs/partials/useCases.md) -->
+<!-- The below content is automatically added from ../docs/partials/useCases.md -->
 The `<auro-header>` element should be used in situations where users may:
 
 * page header
@@ -28,15 +28,15 @@ The `<auro-header>` element should be used in situations where users may:
 The auro-header will default to the h1 element with the `header--display` style.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/basic.html) -->
+  <!-- The below content is automatically added from ../apiExamples/basic.html -->
   <auro-header>Hello World!</auro-header>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/basic.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/basic.html -->
 
 ```html
 <auro-header>Hello World!</auro-header>
@@ -60,15 +60,15 @@ AuroHeader.register('custom-header');
 This will create a new custom element that you can use in your HTML that will function identically to the `auro-header` element.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/custom.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/custom.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/custom.html) -->
+  <!-- The below content is automatically added from ../apiExamples/custom.html -->
   <custom-header>Hello World!</custom-header>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/custom.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/custom.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/custom.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/custom.html -->
 
 ```html
 <custom-header>Hello World!</custom-header>

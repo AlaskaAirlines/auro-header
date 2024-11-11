@@ -18,7 +18,8 @@ const production = !process.env.ROLLUP_WATCH,
         open: true,
         openPage: '/docs/'
       })
-  ]
+  ],
+  plugins: [nodeResolve()],
 };
 
 const indexExamplesConfig = {
@@ -28,7 +29,8 @@ const indexExamplesConfig = {
   output: {
     format: 'esm',
     dir: 'demo/'
-  }
+  },
+  plugins: [nodeResolve()],
 };
 
 export default [modernConfig, indexExamplesConfig];

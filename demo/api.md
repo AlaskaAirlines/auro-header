@@ -1,5 +1,5 @@
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../api.md) -->
-<!-- The below content is automatically added from ./../api.md -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../docs/api.md) -->
+<!-- The below content is automatically added from ../docs/api.md -->
 
 # auro-header
 
@@ -30,15 +30,15 @@ The auro-header component is a custom element to make using headers with the Aur
 The auro-header will default to the h1 element with the `header--display` style.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/basic.html) -->
+  <!-- The below content is automatically added from ../apiExamples/basic.html -->
   <auro-header>Hello World!</auro-header>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/basic.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/basic.html -->
 
 ```html
 <auro-header>Hello World!</auro-header>
@@ -55,15 +55,15 @@ Use the `level` attribute to change the size of the `auro-header`.
 **Note**: Changing the header level does not change the header style. This example will output an h3 header element with the default header--display style.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/level.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/level.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/level.html) -->
+  <!-- The below content is automatically added from ../apiExamples/level.html -->
   <auro-header level="3">Hello World!</auro-header>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/level.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/level.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/level.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/level.html -->
 
 ```html
 <auro-header level="3">Hello World!</auro-header>
@@ -78,15 +78,15 @@ Use the `display` attribute to change the font weight of the `auro-header`.
 **Note**: Changing the header style does not change the size of the header. This example will output an h1 header element with the `header--display` style.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/display.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/display.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/display.html) -->
+  <!-- The below content is automatically added from ../apiExamples/display.html -->
   <auro-header display="800">Hello World!</auro-header>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/display.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/display.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/display.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/display.html -->
 
 ```html
 <auro-header display="800">Hello World!</auro-header>
@@ -99,8 +99,8 @@ Use the `display` attribute to change the font weight of the `auro-header`.
 Additional examples with various header `level` and `display` options.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/additionalExamples.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/additionalExamples.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/additionalExamples.html) -->
+  <!-- The below content is automatically added from ../apiExamples/additionalExamples.html -->
   <auro-header level="2" display="700">Hello World!</auro-header>
   <auro-header level="2" display="600">Hello World!</auro-header>
   <auro-header level="3" display="500">Hello World!</auro-header>
@@ -109,8 +109,8 @@ Additional examples with various header `level` and `display` options.
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/additionalExamples.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/additionalExamples.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/additionalExamples.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/additionalExamples.html -->
 
 ```html
 <auro-header level="2" display="700">Hello World!</auro-header>
@@ -130,8 +130,8 @@ The following example shows how you can update the `bottom` margin to use the `5
 Also note the use of the  util_stackMarginNone--top  utility selector on the ol from [Web Core Style Sheets](https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-layout-mixin-auro_spacing).
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/margins.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/margins.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/margins.html) -->
+  <!-- The below content is automatically added from ../apiExamples/margins.html -->
   <auro-header level="2" display="500" margin="bottom" size="50">Hello World!</auro-header>
   <ol className="util_stackMarginNone--top">
     <li>... thing</li>
@@ -141,8 +141,8 @@ Also note the use of the  util_stackMarginNone--top  utility selector on the ol 
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/margins.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/margins.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/margins.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/margins.html -->
 
 ```html
 <auro-header level="2" display="500" margin="bottom" size="50">Hello World!</auro-header>
@@ -156,8 +156,8 @@ Also note the use of the  util_stackMarginNone--top  utility selector on the ol 
 The following example shows how you can update both margins to use the 400 size setting.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/margins2.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/margins2.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/margins2.html) -->
+  <!-- The below content is automatically added from ../apiExamples/margins2.html -->
   <auro-header level="2" display="500" margin="both" size="400">Hello World!</auro-header>
   <ol className="util_stackMarginNone--top">
     <li>... thing</li>
@@ -167,8 +167,8 @@ The following example shows how you can update both margins to use the 400 size 
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/margins2.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/margins2.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/margins2.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/margins2.html -->
 
 ```html
 <auro-header level="2" display="500" margin="both" size="400">Hello World!</auro-header>
@@ -185,8 +185,8 @@ The following example shows how you can update both margins to use the 400 size 
 If there is a CSS selector that has the color definition you want to use with the header, simply wrap the header in a `div` or `span` and the auro-header component will inherit the color.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/colorInheritance.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/colorInheritance.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/colorInheritance.html) -->
+  <!-- The below content is automatically added from ../apiExamples/colorInheritance.html -->
   <div style="color: var(--ds-color-alert-error-default)">
     <auro-header level="3" display="700">There has been an error</auro-header>
   </div>
@@ -194,8 +194,8 @@ If there is a CSS selector that has the color definition you want to use with th
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/colorInheritance.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/colorInheritance.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/colorInheritance.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/colorInheritance.html -->
 
 ```html
 <div style="color: var(--ds-color-alert-error-default)">
@@ -210,8 +210,8 @@ If there is a CSS selector that has the color definition you want to use with th
 If it's preferred not to wrap the header component in another element, use the `color` property to set the color value directly on the header element.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/directColor.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/directColor.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/directColor.html) -->
+  <!-- The below content is automatically added from ../apiExamples/directColor.html -->
   <auro-header level="3" display="700" color="var(--ds-color-border-active-default)">
     On the journey together
   </auro-header>
@@ -219,8 +219,8 @@ If it's preferred not to wrap the header component in another element, use the `
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/directColor.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/directColor.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/directColor.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/directColor.html -->
 
 ```html
 <auro-header level="3" display="700" color="var(--ds-color-border-active-default)">
@@ -237,8 +237,8 @@ One of the challenges of using a design system is coping with legacy CSS that su
 This feature should only to be used within environments where the REM values cannot be used.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/fixed.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/fixed.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/fixed.html) -->
+  <!-- The below content is automatically added from ../apiExamples/fixed.html -->
   <auro-header level="3" display="700" fixed>
     On the journey together
   </auro-header>
@@ -246,8 +246,8 @@ This feature should only to be used within environments where the REM values can
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/fixed.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/fixed.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/fixed.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/fixed.html -->
 
 ```html
 <auro-header level="3" display="700" fixed>

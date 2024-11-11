@@ -6,12 +6,12 @@ This file is generated based on a template fetched from `./docs/partials/index.m
 
 # Header
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./description.md) -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../docs/partials/description.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## auro-header use cases
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./useCases.md) -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../docs/partials/useCases.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## Example(s)
@@ -19,14 +19,14 @@ This file is generated based on a template fetched from `./docs/partials/index.m
 The auro-header will default to the h1 element with the `header--display` style.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/basic.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/basic.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -48,14 +48,14 @@ AuroHeader.register('custom-header');
 This will create a new custom element that you can use in your HTML that will function identically to the `auro-header` element.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/custom.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/custom.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/custom.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/custom.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
