@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.4.1](https://github.com/AlaskaAirlines/auro-header/compare/v2.4.0...v2.4.1) (2024-11-12)
+
+
+### Bug Fixes
+
+* update markdown partial pathing to consume new auro lib [#129](https://github.com/AlaskaAirlines/auro-header/issues/129) ([687508c](https://github.com/AlaskaAirlines/auro-header/commit/687508c0648b644dfc117272adce541689dd7d2d))
+
 # [2.4.0](https://github.com/AlaskaAirlines/auro-header/compare/v2.3.1...v2.4.0) (2024-10-21)
 
 
