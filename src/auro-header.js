@@ -18,9 +18,7 @@ import styleCss from "./style-css.js";
  * @attr {String} display - Determines presentation of header. Options are `display`, `800`, `700`, `600`, `500`, `400`, `300`.
  * @attr {String} color - Allows user to pass in CSS custom property or direct hex value to change the color of the header
  * @attr {String} margin - Specify the margin(s) to be altered. Options are `top`, `bottom`, or `both`.
- * @attr {String} size - Specify size of margin adjustment, either `none`, `25`, `50`, `100`, `150`, `200`, `300`, `400`, `600` or `800`. **DEPRECATED** the `xxxs` - `xxxl` options.
- * @attr {String} type - **DEPRECATED** Option, `px`. Legacy option for converting REMs to PX. Use `fixed` feature.
- * @attr {Boolean} fixed - Uses px values instead of rem
+ * @attr {String} size - Specify size of margin adjustment, either `none`, `25`, `50`, `100`, `150`, `200`, `300`, `400`, `600` or `800`.
  */
 
 /* eslint complexity: ["error", 21] */
@@ -82,16 +80,7 @@ export class AuroHeader extends LitElement {
   spacingDecision(size) {
     if (this.margin === 'both') {
       switch (size) {
-        case 'none': return `util_stackMarginNone--top util_stackMarginNone--bottom`;
-        case 'xxxs': return `util_stackMarginXxxs--top util_stackMarginXxxs--bottom`;
-        case 'xxs': return `util_stackMarginXxs--top util_stackMarginXxs--bottom`;
-        case 'xs': return `util_stackMarginXs--top util_stackMarginXs--bottom`;
-        case 'sm': return `util_stackMarginSm--top util_stackMarginSm--bottom`;
-        case 'md': return `util_stackMarginMd--top util_stackMarginMd--bottom`;
-        case 'lg': return `util_stackMarginLg--top util_stackMarginLg--bottom`;
-        case 'xl': return `util_stackMarginXl--top util_stackMarginXl--bottom`;
-        case 'xxl': return `util_stackMarginXxl--top util_stackMarginXxl--bottom`;
-        case 'xxxl': return `util_stackMarginXxl--top util_stackMarginXxl--bottom`;
+        case 'none': return `util_stackMarginnone--top util_stackMarginnone--bottom`;
         case '25': return `util_stackMargin25--top util_stackMargin25--bottom`;
         case '50': return `util_stackMargin50--top util_stackMargin50--bottom`;
         case '100': return `util_stackMargin100--top util_stackMargin100--bottom`;
@@ -116,7 +105,7 @@ export class AuroHeader extends LitElement {
    */
   spacingApplied(size) {
     switch (size) {
-      case 'none': return `util_stackMarginNone--${this.margin}`;
+      case 'none': return `util_stackMarginnone--${this.margin}`;
       case '25': return `util_stackMargin25--${this.margin}`;
       case '50': return `util_stackMargin50--${this.margin}`;
       case '100': return `util_stackMargin100--${this.margin}`;
@@ -126,15 +115,6 @@ export class AuroHeader extends LitElement {
       case '400': return `util_stackMargin400--${this.margin}`;
       case '600': return `util_stackMarginX600--${this.margin}`;
       case '800': return `util_stackMargin800--${this.margin}`;
-      case 'xxxs': return `util_stackMarginXxxs--${this.margin}`;
-      case 'xxs': return `util_stackMarginXxs--${this.margin}`;
-      case 'xs': return `util_stackMarginXs--${this.margin}`;
-      case 'sm': return `util_stackMarginSm--${this.margin}`;
-      case 'md': return `util_stackMarginMd--${this.margin}`;
-      case 'lg': return `util_stackMarginLg--${this.margin}`;
-      case 'xl': return `util_stackMarginXl--${this.margin}`;
-      case 'xxl': return `util_stackMarginXxl--${this.margin}`;
-      case 'xxxl': return `util_stackMarginXxl--${this.margin}`;
       default: return '';
     }
   }

@@ -121,7 +121,8 @@
             "./README.md",
             "./docs/api.md",
             "./demo/index.md",
-            "./demo/api.md"
+            "./demo/api.md",
+            "./demo/index.min.js"
           ]
         }
       ],
