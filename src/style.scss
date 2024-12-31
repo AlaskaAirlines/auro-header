@@ -13,105 +13,6 @@
 @import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/headings";
 
 $auro-spacing-types: stack;
-
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
-
-// All the following code is DEPRECATED!
-// With the update for the FIXED feature, this is no longer needed.
-// REMOVE all support for this feature with the next MAJOR release.
-
-// the following styles are only to support use of auro-header
-// in legacy UIs where hard-px values are needed.
-:host([type=px]) {
-  .heading--display {
-    font-size: var(--ds-text-heading-display-px-breakpoint-sm, $ds-text-heading-display-px-breakpoint-sm);
-    line-height: var(--ds-text-heading-display-height-breakpoint-px-sm, $ds-text-heading-display-height-breakpoint-px-sm);
-
-    @include auro_breakpoint--md {
-      font-size: var(--ds-text-heading-display-px-breakpoint-md, $ds-text-heading-display-px-breakpoint-md);
-      line-height: var(--ds-text-heading-display-height-breakpoint-px-sm, $ds-text-heading-display-height-breakpoint-px-sm);
-    }
-
-    @include auro_breakpoint--lg {
-      font-size: var(--ds-text-heading-display-px-breakpoint-lg, $ds-text-heading-display-px-breakpoint-lg);
-      line-height: var(--ds-text-heading-display-height-breakpoint-px-lg, $ds-text-heading-display-height-breakpoint-px-lg);
-    }
-  }
-
-  .heading--800 {
-    font-size: var(--ds-text-heading-800-px-breakpoint-sm, $ds-text-heading-800-px-breakpoint-sm);
-    line-height: var(--ds-text-heading-800-height-breakpoint-px-sm, $ds-text-heading-800-height-breakpoint-px-sm);
-
-    @include auro_breakpoint--md {
-      font-size: var(--ds-text-heading-800-px-breakpoint-md, $ds-text-heading-800-px-breakpoint-md);
-      line-height: var(--ds-text-heading-800-height-breakpoint-px-md, $ds-text-heading-800-height-breakpoint-px-md);
-    }
-
-    @include auro_breakpoint--lg {
-      font-size: var(--ds-text-heading-800-px-breakpoint-lg, $ds-text-heading-800-px-breakpoint-lg);
-      line-height: var(--ds-text-heading-800-height-breakpoint-px-lg, $ds-text-heading-800-height-breakpoint-px-lg);
-    }
-  }
-
-  .heading--700 {
-    font-size: var(--ds-text-heading-700-px-breakpoint-sm, $ds-text-heading-700-px-breakpoint-sm);
-    line-height: var(--ds-text-heading-700-height-breakpoint-px-sm, $ds-text-heading-700-height-breakpoint-px-sm);
-
-    @include auro_breakpoint--md {
-      font-size: var(--ds-text-heading-700-px-breakpoint-md, $ds-text-heading-700-px-breakpoint-md);
-      line-height: var(--ds-text-heading-700-height-breakpoint-px-md, $ds-text-heading-700-height-breakpoint-px-md);
-    }
-
-    @include auro_breakpoint--lg {
-      font-size: var(--ds-text-heading-700-px-breakpoint-lg, $ds-text-heading-700-px-breakpoint-lg);
-      line-height: var(--ds-text-heading-700-height-breakpoint-px-lg, $ds-text-heading-700-height-breakpoint-px-lg);
-    }
-  }
-
-  .heading--600 {
-    font-size: var(--ds-text-heading-600-px-breakpoint-sm, $ds-text-heading-600-px-breakpoint-sm);
-    line-height: var(--ds-text-heading-600-height-breakpoint-px-sm, $ds-text-heading-600-height-breakpoint-px-sm);
-    margin: var(--ds-size-200) 0;
-
-    @include auro_breakpoint--md {
-      font-size: var(--ds-text-heading-600-px-breakpoint-md, $ds-text-heading-600-px-breakpoint-md);
-      line-height: var(--ds-text-heading-600-height-breakpoint-px-md, $ds-text-heading-600-height-breakpoint-px-md);
-    }
-
-    @include auro_breakpoint--lg {
-      line-height: var(--ds-text-heading-600-height-breakpoint-px-lg, $ds-text-heading-600-height-breakpoint-px-lg);
-    }
-  }
-
-  .heading--500 {
-    font-size: var(--ds-text-heading-500-px-breakpoint-sm, $ds-text-heading-500-px-breakpoint-sm);
-    line-height: var(--ds-text-heading-500-height-breakpoint-px-sm, $ds-text-heading-500-height-breakpoint-px-sm);
-    margin: 16px 0;
-
-    @include auro_breakpoint--md {
-      font-size: var(--ds-text-heading-500-px-breakpoint-md, $ds-text-heading-500-px-breakpoint-md);
-      line-height: var(--ds-text-heading-500-height-breakpoint-px-md, $ds-text-heading-500-height-breakpoint-px-md);
-    }
-
-    @include auro_breakpoint--lg {
-      line-height: var(--ds-text-heading-500-height-breakpoint-px-lg, $ds-text-heading-500-height-breakpoint-px-lg);
-    }
-  }
-
-  .heading--400 {
-    font-size: var(--ds-text-heading-400-px, $ds-text-heading-400-px);
-    line-height: var(--ds-text-heading-400-height-px, $ds-text-heading-400-height-px);
-    margin: var(--ds-size-150) 0;
-  }
-
-  .heading--300 {
-    font-size: var(--ds-text-heading-300-px, $ds-text-heading-300-px);
-    line-height: var(--ds-text-heading-300-height-px, $ds-text-heading-300-height-px);
-    margin: var(--ds-size-150) 0;
-  }
-}
-
-// Legacy mappings were kept for backwards compatibility
 $size-map: (
   "none": 0,
   "25": var(--ds-size-25, $ds-size-25),
@@ -122,30 +23,17 @@ $size-map: (
   "300": var(--ds-size-300, $ds-size-300),
   "400": var(--ds-size-400, $ds-size-400),
   "600": var(--ds-size-600, $ds-size-600),
-  "800": var(--ds-size-800, $ds-size-800),
-  "Xxxs": var(--ds-size-25, $ds-size-25),
-  "Xxs": var(--ds-size-50, $ds-size-50),
-  "Xs": var(--ds-size-100, $ds-size-100),
-  "Sm": var(--ds-size-150, $ds-size-150),
-  "Md": var(--ds-size-200, $ds-size-200),
-  "Lg": var(--ds-size-300, $ds-size-300),
-  "Xl": var(--ds-size-400, $ds-size-400),
-  "Xxl": var(--ds-size-600, $ds-size-600),
-  "Xxxl": var(--ds-size-800, $ds-size-800)
+  "800": var(--ds-size-800, $ds-size-800)
 );
 
 @each $name, $size in $size-map {
-  :host([type=px]) {
-    .util_stackMargin#{$name}--bottom {
-      margin-bottom: $size;
-    }
+  .util_stackMargin#{$name}--bottom {
+    margin-bottom: $size;
   }
 }
 
 @each $name, $size in $size-map {
-  :host([type=px]) {
-    .util_stackMargin#{$name}--top {
-      margin-bottom: $size;
-    }
+  .util_stackMargin#{$name}--top {
+    margin-top: $size;
   }
 }
