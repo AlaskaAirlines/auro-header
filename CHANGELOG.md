@@ -1,5 +1,34 @@
 # Semantic Release Automated Changelog
 
+# [3.0.0](https://github.com/AlaskaAirlines/auro-header/compare/v2.4.1...v3.0.0) (2025-01-03)
+
+
+### Performance Improvements
+
+* remove deprecated code issues [#133](https://github.com/AlaskaAirlines/auro-header/issues/133) ([e52bfe1](https://github.com/AlaskaAirlines/auro-header/commit/e52bfe13422375be5eecdad1a8e145d1b3e3a71f))
+* semantic release set to main ([e8d5cb3](https://github.com/AlaskaAirlines/auro-header/commit/e8d5cb337dba2e82cbd5661a2064bf1035c2c196))
+* update dependencies ([50e644e](https://github.com/AlaskaAirlines/auro-header/commit/50e644ed178472f396e482760798638f8331e51d))
+* update node to version 22 ([cb06869](https://github.com/AlaskaAirlines/auro-header/commit/cb068694ad71f37fae0670e4d12b9521c66ad455))
+
+
+### BREAKING CHANGES
+
+* This code update resolves issues with deprecated features and cleans up
+the implementation of the `auro-header` component. The `fixed` attribute and legacy size
+options (`xxxs` to `xxxl`) have been eliminated, along with related utility classes and
+documentation references, simplifying margin handling to specified numeric
+values (`none`, `25`, `50`, etc.).
+
+Legacy styles and examples supporting pixel-based rendering are removed, aligning the
+component with modern practices. Additionally, two lines in `.husky/pre-commit` that would
+fail in version `v10.0.0`—`#!/usr/bin/env sh` and `. "$(dirname -- "$0")/_/husky.sh"`—were
+removed to ensure compatibility.
+
+Updates include revisions to documentation files, API examples, and the `auro-header.js` source code,
+while dependencies in the `package.json` file are updated, reflecting the latest version of
+`@aurodesignsystem/auro-library`. These changes streamline the codebase, remove outdated
+functionality, and improve maintainability for future development.
+
 ## [2.4.1](https://github.com/AlaskaAirlines/auro-header/compare/v2.4.0...v2.4.1) (2024-11-12)
 
 
