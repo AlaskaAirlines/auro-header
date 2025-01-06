@@ -14,7 +14,7 @@ import styleCss from "./style-css.js";
 /**
  * The auro-header component is a custom element to make using headers with the Auro Design System seamless and easy.
  *
- * @attr {String} level - Determines heading level for HTML element. Options are `1` - `6`
+ * @attr {String} level - Determines heading level for HTML element. Options are `none` - `6`. Default is `1`. If `none` is selected, the element will be a `span`.
  * @attr {String} display - Determines presentation of header. Options are `display`, `800`, `700`, `600`, `500`, `400`, `300`.
  * @attr {String} color - Allows user to pass in CSS custom property or direct hex value to change the color of the header
  * @attr {String} margin - Specify the margin(s) to be altered. Options are `top`, `bottom`, or `both`.
@@ -109,6 +109,7 @@ export class AuroHeader extends LitElement {
     const colorStyles = ifDefined(this.color || undefined);
 
     switch (level) {
+      case 'none': return html`<span class="${spacingStyles}" style="color: ${colorStyles}"><slot></slot></span>`;
       case '2': return html`<h2 class="${spacingStyles}" style="color: ${colorStyles}"><slot></slot></h2>`;
       case '3': return html`<h3 class="${spacingStyles}" style="color: ${colorStyles}"><slot></slot></h3>`;
       case '4': return html`<h4 class="${spacingStyles}" style="color: ${colorStyles}"><slot></slot></h4>`;
