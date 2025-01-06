@@ -72,51 +72,26 @@ export class AuroHeader extends LitElement {
   }
 
   /**
-   * Determines if the spacing is to be applied uniform or individual.
+   * Determines spacing CSS classes.
    * @private
-   * @param {string} size - Accepts string for size definition.
-   * @returns {string} - Returns either selectors or function.
+   * @returns {string} - Returns CSS class string.
    */
-  spacingDecision(size) {
-    if (this.margin === 'both') {
-      switch (size) {
-        case 'none': return `util_stackMarginnone--top util_stackMarginnone--bottom`;
-        case '25': return `util_stackMargin25--top util_stackMargin25--bottom`;
-        case '50': return `util_stackMargin50--top util_stackMargin50--bottom`;
-        case '100': return `util_stackMargin100--top util_stackMargin100--bottom`;
-        case '150': return `util_stackMargin150--top util_stackMargin150--bottom`;
-        case '200': return `util_stackMargin200--top util_stackMargin200--bottom`;
-        case '300': return `util_stackMargin300--top util_stackMargin300--bottom`;
-        case '400': return `util_stackMargin400--top util_stackMargin400--bottom`;
-        case '600': return `util_stackMargin600--top util_stackMargin600--bottom`;
-        case '800': return `util_stackMargin800--top util_stackMargin800--bottom`;
-        default: return '';
-      }
-    } else {
-      return this.spacingApplied(size);
-    }
-  }
+  get spacingClasses() {
+    /* eslint-disable-next-line array-element-newline */
+    const validSizes = ['none', '25', '50', '100', '150', '200', '300', '400', '600', '800'];
 
-  /**
-   * If spacing is individual, return will be single selector based on input.
-   * @private
-   * @param {string} size - Accepts string for size definition.
-   * @returns {string} - Returns selector.
-   */
-  spacingApplied(size) {
-    switch (size) {
-      case 'none': return `util_stackMarginnone--${this.margin}`;
-      case '25': return `util_stackMargin25--${this.margin}`;
-      case '50': return `util_stackMargin50--${this.margin}`;
-      case '100': return `util_stackMargin100--${this.margin}`;
-      case '150': return `util_stackMargin150--${this.margin}`;
-      case '200': return `util_stackMargin200--${this.margin}`;
-      case '300': return `util_stackMargin300--${this.margin}`;
-      case '400': return `util_stackMargin400--${this.margin}`;
-      case '600': return `util_stackMarginX600--${this.margin}`;
-      case '800': return `util_stackMargin800--${this.margin}`;
-      default: return '';
+    if (!this.margin) {
+      return '';
     }
+
+    const baseClass = validSizes.includes(this.size) ? `util_stackMargin${this.size}` : '';
+    if (!baseClass) {
+      return '';
+    }
+
+    return this.margin === 'both'
+      ? `${baseClass}--top ${baseClass}--bottom`
+      : `${baseClass}--${this.margin}`;
   }
 
   /**
@@ -130,13 +105,16 @@ export class AuroHeader extends LitElement {
       this.display = 'display';
     }
 
+    const spacingStyles = `heading heading--${this.display} ${this.spacingClasses}`;
+    const colorStyles = ifDefined(this.color || undefined);
+
     switch (level) {
-      case '2': return html`<h2 class="heading heading--${this.display} ${this.spacingDecision(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h2>`;
-      case '3': return html`<h3 class="heading heading--${this.display} ${this.spacingDecision(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h3>`;
-      case '4': return html`<h4 class="heading heading--${this.display} ${this.spacingDecision(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h4>`;
-      case '5': return html`<h5 class="heading heading--${this.display} ${this.spacingDecision(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h5>`;
-      case '6': return html`<h6 class="heading heading--${this.display} ${this.spacingDecision(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h6>`;
-      default: return html`<h1 class="heading heading--${this.display} ${this.spacingDecision(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h1>`;
+      case '2': return html`<h2 class="${spacingStyles}" style="color: ${colorStyles}"><slot></slot></h2>`;
+      case '3': return html`<h3 class="${spacingStyles}" style="color: ${colorStyles}"><slot></slot></h3>`;
+      case '4': return html`<h4 class="${spacingStyles}" style="color: ${colorStyles}"><slot></slot></h4>`;
+      case '5': return html`<h5 class="${spacingStyles}" style="color: ${colorStyles}"><slot></slot></h5>`;
+      case '6': return html`<h6 class="${spacingStyles}" style="color: ${colorStyles}"><slot></slot></h6>`;
+      default: return html`<h1 class="${spacingStyles}" style="color: ${colorStyles}"><slot></slot></h1>`;
     }
   }
   // function that renders the HTML and CSS into  the scope of the component
