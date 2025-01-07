@@ -25,6 +25,15 @@ describe('auro-header', () => {
     expect(heading.tagName).to.equal('H1');
   });
 
+  it('sets non-semantic element', async () => {
+    const el = await fixture(html`
+      <auro-header level="none" display="display" color="orange">Hello World!</auro-header>
+    `);
+
+    const heading = el.shadowRoot.querySelector('span');
+    expect(heading.tagName).to.equal('SPAN');
+  });
+
   it('sets display prop if empty string', async () => {
     const el = await fixture(html`
       <auro-header level="1" display="" color="orange">Hello World!</auro-header>
@@ -41,6 +50,15 @@ describe('auro-header', () => {
 
     const heading = el.shadowRoot.querySelector('h1');
     expect(heading.style.color).to.equal('orange');
+  });
+
+  it('checks invalid size value', async () => {
+    const el = await fixture(html`
+      <auro-header level="2" display="display" size="66" margin="bottom">Hello World!</auro-header>
+    `);
+
+    const heading = el.shadowRoot.querySelector('h2');
+    expect(heading.className).to.equal('heading heading--display ');
   });
 
   it('sets bottom margin CURRENT', async () => {
