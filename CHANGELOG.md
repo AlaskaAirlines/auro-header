@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.0.1](https://github.com/AlaskaAirlines/auro-header/compare/v3.0.0...v3.0.1) (2025-02-08)
+
+
+### Performance Improvements
+
+* update dependencies ([5074649](https://github.com/AlaskaAirlines/auro-header/commit/5074649f92a115bbea0fecf57d40f5eca9448816))
+
 # [3.0.0](https://github.com/AlaskaAirlines/auro-header/compare/v2.4.1...v3.0.0) (2025-01-03)
 
 
