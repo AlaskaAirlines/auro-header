@@ -26,6 +26,12 @@ $size-map: (
   "800": var(--ds-size-800, $ds-size-800)
 );
 
+:host([no-margin-block]) {
+  .heading {
+    margin-block: 0;
+  }
+}
+
 @each $name, $size in $size-map {
   .util_stackMargin#{$name}--bottom {
     margin-bottom: $size;

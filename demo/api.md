@@ -5,6 +5,12 @@
 
 The auro-header component is a custom element to make using headers with the Auro Design System seamless and easy.
 
+## Attributes
+
+| Attribute         | Type      | Description                                  |
+|-------------------|-----------|----------------------------------------------|
+| `no-margin-block` | `Boolean` | if declared, margin-block will be set to `0` |
+
 ## Properties
 
 | Property  | Attribute | Type     | Default   | Description                                      |
