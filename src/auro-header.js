@@ -14,6 +14,7 @@ import styleCss from "./style-css.js";
 /**
  * The auro-header component is a custom element to make using headers with the Auro Design System seamless and easy.
  *
+ * @attr {Boolean} no-margin-block - if declared, margin-block will be set to `0`
  * @attr {String} level - Determines heading level for HTML element. Options are `1` - `6`
  * @attr {String} display - Determines presentation of header. Options are `display`, `800`, `700`, `600`, `500`, `400`, `300`.
  * @attr {String} color - Allows user to pass in CSS custom property or direct hex value to change the color of the header
