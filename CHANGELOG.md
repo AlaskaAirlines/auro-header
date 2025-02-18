@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [3.1.0](https://github.com/AlaskaAirlines/auro-header/compare/v3.0.1...v3.1.0) (2025-02-18)
+
+
+### Features
+
+* add `no-margin-block` attribute to remove `margin-block` ([17340a0](https://github.com/AlaskaAirlines/auro-header/commit/17340a0a7ad00f2362f4d34950e4cba1a61fda6b))
+
 ## [3.0.1](https://github.com/AlaskaAirlines/auro-header/compare/v3.0.0...v3.0.1) (2025-02-08)
 
 
