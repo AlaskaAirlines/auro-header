@@ -1,4 +1,4 @@
-// Copyright (c) 2020 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
+// Copyright (c) 2025 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
 // See LICENSE in the project root for license information.
 
 // ---------------------------------------------------------------------
@@ -6,8 +6,9 @@
 /* stylelint-disable at-rule-empty-line-before, selector-attribute-quotes, selector-class-pattern, order/properties-order, scss/dollar-variable-first-in-block */
 
 // Import Auro tokens
-@import "./../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables";
-@import "./../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariableMap";
+
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/auro-classic/SCSSVariables';
+@import "./../node_modules/@aurodesignsystem/design-tokens/dist/auro-classic/SCSSVariableMap";
 
 @import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints";
 @import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/headings";
