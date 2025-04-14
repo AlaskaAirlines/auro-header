@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [4.0.1](https://github.com/AlaskaAirlines/auro-header/compare/v4.0.0...v4.0.1) (2025-04-14)
+
+
+### Performance Improvements
+
+* update dependencies and tsconfig ([2ff7814](https://github.com/AlaskaAirlines/auro-header/commit/2ff78140e1db2fdfbef0613cc569ceb1eaa0ee2e))
+* update to use new theming tokens [#154](https://github.com/AlaskaAirlines/auro-header/issues/154) ([aa92dcb](https://github.com/AlaskaAirlines/auro-header/commit/aa92dcbffed5e540e9da0588fa31489d55bd0eca))
+
 # [4.0.0](https://github.com/AlaskaAirlines/auro-header/compare/v3.1.0...v4.0.0) (2025-02-28)
 
 
