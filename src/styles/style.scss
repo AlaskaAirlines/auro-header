@@ -7,24 +7,25 @@
 
 // Import Auro tokens
 
-@import './../node_modules/@aurodesignsystem/design-tokens/dist/auro-classic/SCSSVariables';
-@import "./../node_modules/@aurodesignsystem/design-tokens/dist/auro-classic/SCSSVariableMap";
+@use '@aurodesignsystem/design-tokens/dist/legacy/auro-classic/SCSSVariables' as vac;
+@use "@aurodesignsystem/design-tokens/dist/legacy/auro-classic/SCSSVariableMap";
 
-@import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints";
-@import "./../node_modules/@aurodesignsystem/webcorestylesheets/src/headings";
+@use '@aurodesignsystem/webcorestylesheets/dist/bundled/type/classes.alaska.min.css';
 
 $auro-spacing-types: stack;
+
+// margin sizes
 $size-map: (
   "none": 0,
-  "25": var(--ds-size-25, $ds-size-25),
-  "50": var(--ds-size-50, $ds-size-50),
-  "100": var(--ds-size-100, $ds-size-100),
-  "150": var(--ds-size-150, $ds-size-150),
-  "200": var(--ds-size-200, $ds-size-200),
-  "300": var(--ds-size-300, $ds-size-300),
-  "400": var(--ds-size-400, $ds-size-400),
-  "600": var(--ds-size-600, $ds-size-600),
-  "800": var(--ds-size-800, $ds-size-800)
+  "25": var(--ds-size-25, vac.$ds-size-25),
+  "50": var(--ds-size-50, vac.$ds-size-50),
+  "100": var(--ds-size-100, vac.$ds-size-100),
+  "150": var(--ds-size-150, vac.$ds-size-150),
+  "200": var(--ds-size-200, vac.$ds-size-200),
+  "300": var(--ds-size-300, vac.$ds-size-300),
+  "400": var(--ds-size-400, vac.$ds-size-400),
+  "600": var(--ds-size-600, vac.$ds-size-600),
+  "800": var(--ds-size-800, vac.$ds-size-800)
 );
 
 :host([no-margin-block]) {

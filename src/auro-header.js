@@ -5,23 +5,24 @@
 
 import { LitElement, html } from "lit";
 import { ifDefined } from 'lit/directives/if-defined.js';
+import { classMap } from 'lit/directives/class-map.js';
+import { unsafeStatic, html as staticHtml } from 'lit/static-html.js';
 
 import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
 
 // Import touch detection lib
-import styleCss from "./style-css.js";
+import styleCss from "./styles/style-css.js";
 
 /**
  * The auro-header component is a custom element to make using headers with the Auro Design System seamless and easy.
  *
  * @attr {Boolean} no-margin-block - if declared, margin-block will be set to `0`
- * @attr {String} level - Determines heading level for HTML element. Options are `1` - `6`
- * @attr {String} display - Determines presentation of header. Options are `display`, `800`, `700`, `600`, `500`, `400`, `300`.
  * @attr {String} color - Allows user to pass in CSS custom property or direct hex value to change the color of the header
+ * @attr {String} display - Determines the visual appearance of the header. Options are `display`, `800`, `700`, `600`, `500`, `400`, `300`.
+ * @attr {String} level - Determines the semantic heading level of the HTML element. Options are `1` - `6`
  * @attr {String} margin - Specify the margin(s) to be altered. Options are `top`, `bottom`, or `both`.
  * @attr {String} size - Specify size of margin adjustment, either `none`, `25`, `50`, `100`, `150`, `200`, `300`, `400`, `600` or `800`.
  */
-
 /* eslint complexity: ["error", 21] */
 
 // build the component class
@@ -53,6 +54,22 @@ export class AuroHeader extends LitElement {
 
   static get styles() {
     return [styleCss];
+  }
+
+  /**
+   * Mapping of display values to their corresponding CSS classes
+   * @private
+   */
+  static get displayClassMap() {
+    return {
+      'display': 'heading-xl',
+      '800': 'heading-xl',
+      '700': 'heading-lg',
+      '600': 'heading-md',
+      '500': 'heading-sm',
+      '400': 'heading-xs',
+      '300': 'heading-2xs'
+    };
   }
 
   /**
@@ -131,17 +148,36 @@ export class AuroHeader extends LitElement {
       this.display = 'display';
     }
 
-    switch (level) {
-      case '2': return html`<h2 class="heading heading--${this.display} ${this.spacingDecision(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h2>`;
-      case '3': return html`<h3 class="heading heading--${this.display} ${this.spacingDecision(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h3>`;
-      case '4': return html`<h4 class="heading heading--${this.display} ${this.spacingDecision(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h4>`;
-      case '5': return html`<h5 class="heading heading--${this.display} ${this.spacingDecision(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h5>`;
-      case '6': return html`<h6 class="heading heading--${this.display} ${this.spacingDecision(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h6>`;
-      default: return html`<h1 class="heading heading--${this.display} ${this.spacingDecision(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h1>`;
-    }
-  }
-  // function that renders the HTML and CSS into  the scope of the component
+    const headingLevel = level || '1';
+    const spacingClasses = this.spacingDecision(this.size);
+    
+    // Get the CSS class based on the display prop
+    const headingClass = AuroHeader.displayClassMap[this.display];
+    
+    const classObject = {
+      'heading': true,
+      [`heading--${this.display}`]: true,
+      [headingClass]: true
+    };
 
+    // Add spacing classes to the class object if they exist
+    if (spacingClasses) {
+      const spacingClassArray = spacingClasses.split(' ');
+      spacingClassArray.forEach(cls => {
+        if (cls.trim()) {
+          classObject[cls.trim()] = true;
+        }
+      });
+    }
+
+    const headerClasses = classMap(classObject);
+
+    // unsafeStatic dynamically creates tag names at runtime
+    const tag = unsafeStatic(`h${headingLevel}`);
+    return staticHtml`<${tag} class="${headerClasses}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></${tag}>`;
+  }
+  
+  // function that renders the HTML and CSS into  the scope of the component
   render() {
     return this.template(this.level);
   }

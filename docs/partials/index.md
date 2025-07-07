@@ -16,7 +16,7 @@ This file is generated based on a template fetched from `./docs/partials/index.m
 
 ## Example(s)
 
-The auro-header will default to the h1 element with the `header--display` style.
+The `auro-header` defaults to an `<h1>` element with the `display` visual appearance style.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/basic.html) -->
@@ -30,8 +30,6 @@ The auro-header will default to the h1 element with the `header--display` style.
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
-
-Having a closing statement about your example helps to really complete the thought with your reader.
 
 ## Recommended Use and Version Control
 

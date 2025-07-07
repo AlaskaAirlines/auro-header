@@ -5,7 +5,7 @@
 
 ### Basic
 
-The auro-header will default to the h1 element with the `header--display` style.
+The `auro-header` defaults to an `<h1>` element with the `display` visual appearance style.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/basic.html) -->
@@ -19,13 +19,15 @@ The auro-header will default to the h1 element with the `header--display` style.
 
 </auro-accordion>
 
-### Changing Header Styles
+### Changing Header Styles and Sizes
 
-#### Changing Header Size
+The `auro-header` component allows for flexible customization of both HTML semantics and visual appearance styles.
 
-Use the `level` attribute to change the size of the `auro-header`.
+#### Header Level (HTML Semantics)
 
-**Note**: Changing the header level does not change the header style. This example will output an h3 header element with the default header--display style.
+Use the `level` attribute to control the semantic heading level (`<h1>` through `<h6>`) without affecting its visual style.
+
+**Note**: Changing the `level` only affects the underlying HTML tag (e.g., `<h3>`). It does not change the visual style of the header. To change the appearance, use the `display` attribute.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/level.html) -->
@@ -39,11 +41,9 @@ Use the `level` attribute to change the size of the `auro-header`.
 
 </auro-accordion>
 
-#### Changing Header Font Weight
+#### Header Style (Visual Appearance)
 
-Use the `display` attribute to change the font weight of the `auro-header`.
-
-**Note**: Changing the header style does not change the size of the header. This example will output an h1 header element with the `header--display` style.
+Use the `display` attribute to control the visual style of the header.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/display.html) -->
@@ -56,6 +56,24 @@ Use the `display` attribute to change the font weight of the `auro-header`.
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
+
+##### Display to Heading CSS Class Mapping
+
+The `display` attribute controls the visual style of the header by mapping to specific type heading classes.
+
+Below is how each `display` value corresponds to a heading class:
+
+| `display` Value | CSS Class     |
+|-----------------|---------------|
+| `display` (default)      | `heading-xl`  |
+| `800`           | `heading-xl`  |
+| `700`           | `heading-lg`  |
+| `600`           | `heading-md`  |
+| `500`           | `heading-sm`  |
+| `400`           | `heading-xs`  |
+| `300`           | `heading-2xs` |
+
+These classes apply consistent typography styles, including font size, line height, font weight, and more, ensuring uniform header presentation across components.
 
 ### Additional Header Examples
 

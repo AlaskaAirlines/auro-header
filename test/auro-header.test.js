@@ -2,13 +2,13 @@ import { fixture, html, expect } from '@open-wc/testing';
 import '../index';
 
 describe('auro-header', () => {
-  it('sets the CSS class on auro-header', async () => {
+  it('sets the default display CSS class on auro-header', async () => {
     const el = await fixture(html`
-      <auro-header level="h1" display="display">Hello World!</auro-header>
+      <auro-header level="1" display="display">Hello World!</auro-header>
     `);
 
     const heading = el.shadowRoot.querySelector('h1');
-    expect(heading.className).to.equal('heading heading--display ');
+    expect(heading.className).to.include('heading-xl');
   });
 
   it('sets correct heading element', async () => {
@@ -31,7 +31,7 @@ describe('auro-header', () => {
     `);
 
     const heading = el.shadowRoot.querySelector('h1');
-    expect(heading.className).to.equal('heading heading--display ');
+    expect(heading.className).to.include('heading-xl');
   });
 
   it('sets color to orange', async () => {
@@ -58,7 +58,7 @@ describe('auro-header', () => {
     `);
 
     const heading = el.shadowRoot.querySelector('h2');
-    expect(heading.className).to.equal('heading heading--display util_stackMargin50--bottom');
+    expect(heading.className).to.include('util_stackMargin50--bottom');
   });
 
   it('sets top and bottom margin CURRENT', async () => {
@@ -76,7 +76,7 @@ describe('auro-header', () => {
     `);
 
     const heading = el.shadowRoot.querySelector('h2');
-    expect(heading.className).to.equal('heading heading--display util_stackMargin50--top util_stackMargin50--bottom');
+    expect(heading.className).to.include('util_stackMargin50--top util_stackMargin50--bottom');
   });
 
   it('sets color no color', async () => {
@@ -95,7 +95,7 @@ describe('auro-header', () => {
 
   it('auro-header is accessible', async () => {
     const el = await fixture(html`
-      <auro-header level="h1" display="display">Hello World!</auro-header>
+      <auro-header level="1" display="display">Hello World!</auro-header>
     `);
 
     await expect(el).to.be.accessible();
