@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [4.0.2](https://github.com/AlaskaAirlines/auro-header/compare/v4.0.1...v4.0.2) (2025-07-09)
+
+
+### Bug Fixes
+
+* add themeable type classes ([5fe5656](https://github.com/AlaskaAirlines/auro-header/commit/5fe56560c4c247877eeea045d2c7a096cc55fe62))
+* update docs head content ([e406d5a](https://github.com/AlaskaAirlines/auro-header/commit/e406d5ab3ee61ffae680fc0034f1b58289ad415f))
+
 ## [4.0.1](https://github.com/AlaskaAirlines/auro-header/compare/v4.0.0...v4.0.1) (2025-04-14)
 
 
