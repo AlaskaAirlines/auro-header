@@ -28,7 +28,9 @@ $size-map: (
   "800": var(--ds-size-800, vac.$ds-size-800)
 );
 
-:host([no-margin-block]) {
+:host {
+  display: block;
+
   .heading {
     margin-block: 0;
   }

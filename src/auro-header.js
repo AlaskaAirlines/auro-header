@@ -3,7 +3,7 @@
 
 // ---------------------------------------------------------------------
 
-import { LitElement, html } from "lit";
+import { LitElement } from "lit";
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { unsafeStatic, html as staticHtml } from 'lit/static-html.js';
@@ -15,22 +15,18 @@ import styleCss from "./styles/style-css.js";
 
 /**
  * The auro-header component is a custom element to make using headers with the Auro Design System seamless and easy.
- *
- * @attr {Boolean} no-margin-block - if declared, margin-block will be set to `0`
- * @attr {String} color - Allows user to pass in CSS custom property or direct hex value to change the color of the header
- * @attr {String} display - Determines the visual appearance of the header. Options are `display`, `800`, `700`, `600`, `500`, `400`, `300`.
- * @attr {String} level - Determines the semantic heading level of the HTML element. Options are `1` - `6`
- * @attr {String} margin - Specify the margin(s) to be altered. Options are `top`, `bottom`, or `both`.
- * @attr {String} size - Specify size of margin adjustment, either `none`, `25`, `50`, `100`, `150`, `200`, `300`, `400`, `600` or `800`.
  */
 /* eslint complexity: ["error", 21] */
+
+const MAX_LEVEL = 6;
 
 // build the component class
 export class AuroHeader extends LitElement {
   constructor() {
     super();
 
-    this.display = 'display';
+    this.level = 1;
+    this.typography = 'heading';
 
     /**
      * @private
@@ -41,14 +37,89 @@ export class AuroHeader extends LitElement {
   // function to define props used within the scope of this component
   static get properties() {
     return {
-      level:    { type: String },
-      display:  {
+
+      /**
+       *  Determines the semantic heading level of the HTML element. Options are `1` - `6`.
+       */
+      level: {
+        type: Number,
+        reflect: true,
+        converter(value) {
+          const num = Number(value);
+          // Clamp value between 1 and 6, default to 1 if invalid
+          if (isNaN(num) || num < 1) {
+            return 1;
+          }
+          if (num > MAX_LEVEL) {
+            return MAX_LEVEL;
+          }
+          return num;
+        }
+      },
+
+      /**
+       * (Deprecated) Determines the visual appearance of the header. Options are `display`, `800`, `700`, `600`, `500`, `400`, `300`.
+       * @deprecated
+       */
+      display: {
         type: String,
         reflect: true
       },
-      color:    { type: String },
-      margin:   { type: String },
-      size:     { type: String }
+
+      /**
+       * Determines the visual appearance of the header. Options are `1` - `6`.
+       * @default same value as `level`
+       */
+      visualLevel: {
+        type: Number,
+        reflect: true,
+        converter(value) {
+          const num = Number(value);
+          // Clamp value between 1 and 6, default to 1 if invalid
+          if (isNaN(num) || num < 1) {
+            return 1;
+          }
+          if (num > MAX_LEVEL) {
+            return MAX_LEVEL;
+          }
+          return num;
+        }
+      },
+
+      /**
+       * Determines the font of heading, Options are `heading` or `display`.
+       */
+      typography: {
+        type: String,
+        reflect: true
+      },
+
+      /**
+       * (Deprecated) Allows user to pass in CSS custom property or direct hex value to change the color of the header.
+       * @deprecated
+       */
+      color: {
+        type: String,
+        reflect: true
+      },
+
+      /**
+       * (Deprecated) Specify the margin(s) to be altered. Options are `top`, `bottom`, or `both`.
+       * @deprecated
+       */
+      margin: {
+        type: String,
+        reflect: true
+      },
+
+      /**
+       * (Deprecated) Specify size of margin adjustment, either `none`, `25`, `50`, `100`, `150`, `200`, `300`, `400`, `600` or `800`.
+       * @deprecated
+       */
+      size:{
+        type: String,
+        reflect: true
+      }
     };
   }
 
@@ -57,18 +128,36 @@ export class AuroHeader extends LitElement {
   }
 
   /**
-   * Mapping of display values to their corresponding CSS classes
+   * Mapping of display values to their corresponding CSS classes.
    * @private
    */
   static get displayClassMap() {
     return {
-      'display': 'heading-xl',
+      // LEGACY MAP (SHOULD BE REMOVED)
       '800': 'heading-xl',
       '700': 'heading-lg',
       '600': 'heading-md',
       '500': 'heading-sm',
       '400': 'heading-xs',
-      '300': 'heading-2xs'
+      '300': 'heading-2xs',
+
+      // NEW MAP WITH TYPOGRAPHY
+      'heading': {
+        1: 'heading-xl',
+        2: 'heading-lg',
+        3: 'heading-md',
+        4: 'heading-sm',
+        5: 'heading-xs',
+        6: 'heading-2xs'
+      },
+      'display': {
+        1: 'display-2xl',
+        2: 'display-xl',
+        3: 'display-lg',
+        4: 'display-md',
+        5: 'display-sm',
+        6: 'display-xs'
+      }
     };
   }
 
@@ -91,6 +180,7 @@ export class AuroHeader extends LitElement {
 
   /**
    * Determines if the spacing is to be applied uniform or individual.
+   * @deprecated THiS SHOULD BE REMOVED.
    * @private
    * @param {string} size - Accepts string for size definition.
    * @returns {string} - Returns either selectors or function.
@@ -117,6 +207,7 @@ export class AuroHeader extends LitElement {
 
   /**
    * If spacing is individual, return will be single selector based on input.
+   * @deprecated THiS SHOULD BE REMOVED.
    * @private
    * @param {string} size - Accepts string for size definition.
    * @returns {string} - Returns selector.
@@ -144,26 +235,28 @@ export class AuroHeader extends LitElement {
    * @returns {string} - Returns HTML template.
    */
   template(level) {
-    if (this.display === '' || this.display === null) {
-      this.display = 'display';
+    if (!this.visualLevel && !this.display) {
+      this.visualLevel = this.level;
     }
 
     const headingLevel = level || '1';
+    // THIS SHOULD BE REMOVED AS MARGIN AND SIZE ARE DEPRECATED.
     const spacingClasses = this.spacingDecision(this.size);
-    
-    // Get the CSS class based on the display prop
-    const headingClass = AuroHeader.displayClassMap[this.display];
-    
+
+    // Get the CSS class based on typography and display prop
+    // THIS SHOULD BE CHANGED NOT TO USE `this.display` AS IT"S DEPRECATED.
+    const headingClass = this.visualLevel ? AuroHeader.displayClassMap[this.typography][this.visualLevel] : AuroHeader.displayClassMap[this.display];
+
     const classObject = {
       'heading': true,
-      [`heading--${this.display}`]: true,
       [headingClass]: true
     };
 
     // Add spacing classes to the class object if they exist
+    // THIS SHOULD BE REMOVED AS MARGIN AND SIZE ARE DEPRECATED.
     if (spacingClasses) {
       const spacingClassArray = spacingClasses.split(' ');
-      spacingClassArray.forEach(cls => {
+      spacingClassArray.forEach((cls) => {
         if (cls.trim()) {
           classObject[cls.trim()] = true;
         }
@@ -174,9 +267,11 @@ export class AuroHeader extends LitElement {
 
     // unsafeStatic dynamically creates tag names at runtime
     const tag = unsafeStatic(`h${headingLevel}`);
+
+    // COLOR SHOULD BE REMOVED AS IT IS DEPRECATED.
     return staticHtml`<${tag} class="${headerClasses}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></${tag}>`;
   }
-  
+
   // function that renders the HTML and CSS into  the scope of the component
   render() {
     return this.template(this.level);
