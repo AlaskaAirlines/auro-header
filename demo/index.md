@@ -25,7 +25,7 @@ The `<auro-header>` element should be used in situations where users may:
 
 ## Example(s)
 
-The `auro-header` defaults to an `<h1>` element with the `display` visual appearance style.
+The `auro-header` defaults to an `<h1>` element.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/basic.html) -->

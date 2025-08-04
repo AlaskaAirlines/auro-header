@@ -5,7 +5,7 @@
 
 ### Basic
 
-The `auro-header` defaults to an `<h1>` element with the `display` visual appearance style.
+The `auro-header` defaults to an `<h1>` element.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/basic.html) -->
@@ -25,9 +25,9 @@ The `auro-header` component allows for flexible customization of both HTML seman
 
 #### Header Level (HTML Semantics)
 
-Use the `level` attribute to control the semantic heading level (`<h1>` through `<h6>`) without affecting its visual style.
+Use the `level` attribute to control the semantic heading level (`<h1>` through `<h6>`).
 
-**Note**: Changing the `level` only affects the underlying HTML tag (e.g., `<h3>`). It does not change the visual style of the header. To change the appearance, use the `display` attribute.
+If `visualLevel` is not specified, `visualLevel` will default to the same value as `level`.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/level.html) -->
@@ -41,43 +41,42 @@ Use the `level` attribute to control the semantic heading level (`<h1>` through 
 
 </auro-accordion>
 
-#### Header Style (Visual Appearance)
+#### Header Style (Visual Appearance) <a name="visualLevel"></a>
 
-Use the `display` attribute to control the visual style of the header.
+Use the `visualLevel` attribute to control the visual style of the header.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/display.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/visualLevel.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/display.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/visualLevel.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
 
-##### Display to Heading CSS Class Mapping
+#### Typography <a name="typography"></a> to Heading CSS Class Mapping
 
-The `display` attribute controls the visual style of the header by mapping to specific type heading classes.
+The `visualLevel` attribute controls the visual style of the header by mapping to specific <a href="https://auro.alaskaair.com/typography/usage" target="_blank">typography classes</a>.
 
-Below is how each `display` value corresponds to a heading class:
+Below is how each `visualLevel` value corresponds to a typography class:
 
-| `display` Value | CSS Class     |
-|-----------------|---------------|
-| `display` (default)      | `heading-xl`  |
-| `800`           | `heading-xl`  |
-| `700`           | `heading-lg`  |
-| `600`           | `heading-md`  |
-| `500`           | `heading-sm`  |
-| `400`           | `heading-xs`  |
-| `300`           | `heading-2xs` |
+| visualLevel | `typography="heading"`    |  `typography="display"`  |
+|-----------------|---------------|---------------|
+| `1`           | `heading-xl` | `display-2xl` |
+| `2`           | `heading-lg`  | `display-xl`  |
+| `3`           | `heading-md`  | `display-lg`   |
+| `4`           | `heading-sm`  | `display-md`   |
+| `5`           | `heading-xs`  | `display-sm`   |
+| `6`           | `heading-2xs` | `display-xs`   |
 
 These classes apply consistent typography styles, including font size, line height, font weight, and more, ensuring uniform header presentation across components.
 
 ### Additional Header Examples
 
-Additional examples with various header `level` and `display` options.
+Additional examples with various header `level` and `visualLevel` options.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/additionalExamples.html) -->
@@ -93,12 +92,7 @@ Additional examples with various header `level` and `display` options.
 
 ### Adjust Margins
 
-In some cases the margin between elements may need to be adjusted. To do this, the `auro-header` component supports adjusting either the `top`, `bottom` or `both` margins. This coupled with the `size` prop, developers have a [full range of options](https://auro.alaskaair.com/components/auro/header/api).
-
-The following example shows how you can update the `bottom` margin to use the `50` size setting.
-
-Also note the use of the  util_stackMarginNone--top  utility selector on the ol from [Web Core Style Sheets](https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-layout-mixin-auro_spacing).
-
+In some cases the margin between elements may need to be adjusted. To do this, add margin using css style.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/margins.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
@@ -107,20 +101,6 @@ Also note the use of the  util_stackMarginNone--top  utility selector on the ol 
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/margins.html) -->
-<!-- AURO-GENERATED-CONTENT:END -->
-
-</auro-accordion>
-
-The following example shows how you can update both margins to use the 400 size setting.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/margins2.html) -->
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion alignRight>
-  <span slot="trigger">See code</span>
-
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/margins2.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -137,22 +117,6 @@ If there is a CSS selector that has the color definition you want to use with th
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/colorInheritance.html) -->
-<!-- AURO-GENERATED-CONTENT:END -->
-
-</auro-accordion>
-
-### Direct Color Use
-
-If it's preferred not to wrap the header component in another element, use the `color` property to set the color value directly on the header element.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/directColor.html) -->
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion alignRight>
-  <span slot="trigger">See code</span>
-
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/directColor.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
