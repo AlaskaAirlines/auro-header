@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.0.4](https://github.com/AlaskaAirlines/auro-header/compare/v4.0.3...v4.0.4) (2025-08-14)
+
+
+### Bug Fixes
+
+* update auro-library to latest version ([e614a93](https://github.com/AlaskaAirlines/auro-header/commit/e614a935c967c1607c0ff814e453b48544802410))
+
 ## [4.0.3](https://github.com/AlaskaAirlines/auro-header/compare/v4.0.2...v4.0.3) (2025-08-11)
 
 
