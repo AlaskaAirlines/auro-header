@@ -4,7 +4,7 @@ import '../index';
 describe('auro-header', () => {
   it('sets the default display CSS class on auro-header', async () => {
     const el = await fixture(html`
-      <auro-header level="1" display="display">Hello World!</auro-header>
+      <auro-header level="1" visualLevel="1">Hello World!</auro-header>
     `);
 
     const heading = el.shadowRoot.querySelector('h1');
@@ -13,12 +13,12 @@ describe('auro-header', () => {
 
   it('sets correct heading element', async () => {
     const el = await fixture(html`
-      <auro-header level="1" display="display" color="orange">Hello World!</auro-header>
-      <auro-header level="2" display="display" color="orange">Hello World!</auro-header>
-      <auro-header level="3" display="display" color="orange">Hello World!</auro-header>
-      <auro-header level="4" display="display" color="orange">Hello World!</auro-header>
-      <auro-header level="5" display="display" color="orange">Hello World!</auro-header>
-      <auro-header level="6" display="display" color="orange">Hello World!</auro-header>
+      <auro-header level="1" visualLevel="1" color="orange">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" color="orange">Hello World!</auro-header>
+      <auro-header level="3" visualLevel="1" color="orange">Hello World!</auro-header>
+      <auro-header level="4" visualLevel="1" color="orange">Hello World!</auro-header>
+      <auro-header level="5" visualLevel="1" color="orange">Hello World!</auro-header>
+      <auro-header level="6" visualLevel="1" color="orange">Hello World!</auro-header>
     `);
 
     const heading = el.shadowRoot.querySelector('h1');
@@ -27,7 +27,7 @@ describe('auro-header', () => {
 
   it('sets display prop if empty string', async () => {
     const el = await fixture(html`
-      <auro-header level="1" display="" color="orange">Hello World!</auro-header>
+      <auro-header level="1" color="orange">Hello World!</auro-header>
     `);
 
     const heading = el.shadowRoot.querySelector('h1');
@@ -36,7 +36,7 @@ describe('auro-header', () => {
 
   it('sets color to orange', async () => {
     const el = await fixture(html`
-      <auro-header level="1" display="display" color="orange">Hello World!</auro-header>
+      <auro-header level="1" visualLevel="1" color="orange">Hello World!</auro-header>
     `);
 
     const heading = el.shadowRoot.querySelector('h1');
@@ -45,16 +45,16 @@ describe('auro-header', () => {
 
   it('sets bottom margin CURRENT', async () => {
     const el = await fixture(html`
-      <auro-header level="2" display="display" size="50" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="100" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="150" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="200" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="300" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="400" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="500" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="600" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="800" margin="bottom">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="none" margin="bottom">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" size="50" margin="bottom">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" size="100" margin="bottom">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" size="150" margin="bottom">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" size="200" margin="bottom">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" size="300" margin="bottom">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" size="400" margin="bottom">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" size="500" margin="bottom">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" size="600" margin="bottom">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" size="800" margin="bottom">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" size="none" margin="bottom">Hello World!</auro-header>
     `);
 
     const heading = el.shadowRoot.querySelector('h2');
@@ -63,16 +63,16 @@ describe('auro-header', () => {
 
   it('sets top and bottom margin CURRENT', async () => {
     const el = await fixture(html`
-      <auro-header level="2" display="display" size="50" margin="both">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="100" margin="both">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="150" margin="both">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="200" margin="both">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="300" margin="both">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="400" margin="both">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="500" margin="both">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="600" margin="both">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="800" margin="both">Hello World!</auro-header>
-      <auro-header level="2" display="display" size="none" margin="both">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" size="50" margin="both">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" size="100" margin="both">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" size="150" margin="both">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" size="200" margin="both">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" size="300" margin="both">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" size="400" margin="both">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" size="500" margin="both">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" size="600" margin="both">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" size="800" margin="both">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1" size="none" margin="both">Hello World!</auro-header>
     `);
 
     const heading = el.shadowRoot.querySelector('h2');
@@ -81,12 +81,12 @@ describe('auro-header', () => {
 
   it('sets color no color', async () => {
     const el = await fixture(html`
-      <auro-header level="1" display="display">Hello World!</auro-header>
-      <auro-header level="2" display="display">Hello World!</auro-header>
-      <auro-header level="3" display="display">Hello World!</auro-header>
-      <auro-header level="4" display="display">Hello World!</auro-header>
-      <auro-header level="5" display="display">Hello World!</auro-header>
-      <auro-header level="6" display="display">Hello World!</auro-header>
+      <auro-header level="1" visualLevel="1">Hello World!</auro-header>
+      <auro-header level="2" visualLevel="1">Hello World!</auro-header>
+      <auro-header level="3" visualLevel="1">Hello World!</auro-header>
+      <auro-header level="4" visualLevel="1">Hello World!</auro-header>
+      <auro-header level="5" visualLevel="1">Hello World!</auro-header>
+      <auro-header level="6" visualLevel="1">Hello World!</auro-header>
     `);
 
     const heading = el.shadowRoot.querySelector('h1');
@@ -95,7 +95,7 @@ describe('auro-header', () => {
 
   it('auro-header is accessible', async () => {
     const el = await fixture(html`
-      <auro-header level="1" display="display">Hello World!</auro-header>
+      <auro-header level="1" visualLevel="1">Hello World!</auro-header>
     `);
 
     await expect(el).to.be.accessible();
