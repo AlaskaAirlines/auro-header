@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [4.1.0](https://github.com/AlaskaAirlines/auro-header/compare/v4.0.4...v4.1.0) (2025-08-22)
+
+
+### Features
+
+* add `typography` and `visualLevel` props ([d12a48e](https://github.com/AlaskaAirlines/auro-header/commit/d12a48e9636f841e5825edff882df3d22632170b))
+
 ## [4.0.4](https://github.com/AlaskaAirlines/auro-header/compare/v4.0.3...v4.0.4) (2025-08-14)
 
 
