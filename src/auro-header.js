@@ -10,12 +10,11 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { html as staticHtml, unsafeStatic } from "lit/static-html.js";
 
 // Import touch detection lib
-import styleCss from "./styles/style-css.js";
+import styleCss from "./styles/style.scss";
 
 /**
  * The auro-header component is a custom element to make using headers with the Auro Design System seamless and easy.
  */
-/* eslint complexity: ["error", 21] */
 
 const MAX_LEVEL = 6;
 
