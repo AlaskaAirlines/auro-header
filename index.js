@@ -1,3 +1,3 @@
-import { AuroHeader } from './src/auro-header.js';
+import { AuroHeader } from "./src/auro-header.js";
 
 AuroHeader.register();
