@@ -38,7 +38,7 @@ There are two important parts of every Auro component. The <a href="https://deve
 To protect from versioning conflicts with other instances of the component being loaded, it is recommended to use our `AuroHeader.register(name)` method and pass in a unique name.
 
 ```js
-import './src/auro-header';
+import { AuroHeader } from '@aurodesignsystem/auro-header/class';
 
 AuroHeader.register('custom-header');
 ```
