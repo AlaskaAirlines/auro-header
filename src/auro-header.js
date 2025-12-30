@@ -12,17 +12,20 @@ import { html as staticHtml, unsafeStatic } from "lit/static-html.js";
 // Import touch detection lib
 import styleCss from "./styles/style.scss";
 
-/**
- * The auro-header component is a custom element to make using headers with the Auro Design System seamless and easy.
- */
-
 const MAX_LEVEL = 6;
 
-// build the component class
+/**
+ * The `auro-header` element is a custom element to make using headers with the Auro Design System seamless and easy.
+ * @customElement auro-header
+ */
 export class AuroHeader extends LitElement {
   constructor() {
     super();
 
+    this._initializeDefaults();
+  }
+
+  _initializeDefaults() {
     this.level = 1;
     this.typography = "heading";
 
@@ -30,11 +33,30 @@ export class AuroHeader extends LitElement {
      * @private
      */
     this.runtimeUtils = new AuroLibraryRuntimeUtils();
+
   }
 
   // function to define props used within the scope of this component
   static get properties() {
     return {
+      /**
+       * (Deprecated) Allows user to pass in CSS custom property or direct hex value to change the color of the header.
+       * @deprecated
+       */
+      color: {
+        type: String,
+        reflect: true
+      },
+
+      /**
+       * (Deprecated) Determines the visual appearance of the header. Options are `display`, `800`, `700`, `600`, `500`, `400`, `300`.
+       * @deprecated
+       */
+      display: {
+        type: String,
+        reflect: true
+      },
+
       /**
        *  Determines the semantic heading level of the HTML element. Options are `1` - `6`.
        */
@@ -51,21 +73,38 @@ export class AuroHeader extends LitElement {
             return MAX_LEVEL;
           }
           return num;
-        },
+        }
       },
 
       /**
-       * (Deprecated) Determines the visual appearance of the header. Options are `display`, `800`, `700`, `600`, `500`, `400`, `300`.
+       * (Deprecated) Specify the margin(s) to be altered. Options are `top`, `bottom`, or `both`.
        * @deprecated
        */
-      display: {
+      margin: {
         type: String,
-        reflect: true,
+        reflect: true
+      },
+
+      /**
+       * (Deprecated) Specify size of margin adjustment, either `none`, `25`, `50`, `100`, `150`, `200`, `300`, `400`, `600` or `800`.
+       * @deprecated
+       */
+      size: {
+        type: String,
+        reflect: true
+      },
+
+      /**
+       * Determines the font of heading, Options are `heading` or `display`.
+       */
+      typography: {
+        type: String,
+        reflect: true
       },
 
       /**
        * Determines the visual appearance of the header. Options are `1` - `6`.
-       * @default same value as `level`
+       * @default 1
        */
       visualLevel: {
         type: Number,
@@ -81,41 +120,6 @@ export class AuroHeader extends LitElement {
           }
           return num;
         },
-      },
-
-      /**
-       * Determines the font of heading, Options are `heading` or `display`.
-       */
-      typography: {
-        type: String,
-        reflect: true,
-      },
-
-      /**
-       * (Deprecated) Allows user to pass in CSS custom property or direct hex value to change the color of the header.
-       * @deprecated
-       */
-      color: {
-        type: String,
-        reflect: true,
-      },
-
-      /**
-       * (Deprecated) Specify the margin(s) to be altered. Options are `top`, `bottom`, or `both`.
-       * @deprecated
-       */
-      margin: {
-        type: String,
-        reflect: true,
-      },
-
-      /**
-       * (Deprecated) Specify size of margin adjustment, either `none`, `25`, `50`, `100`, `150`, `200`, `300`, `400`, `600` or `800`.
-       * @deprecated
-       */
-      size: {
-        type: String,
-        reflect: true,
       },
     };
   }

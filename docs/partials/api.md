@@ -1,23 +1,22 @@
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=../docs/api.md) -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/api.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
-## API Examples
-
-### Basic
-
-The `auro-header` defaults to an `<h1>` element.
+## Basic
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/basic.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/basic.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
+
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/basic.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/basic.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
+
+## Property & Attribute Examples
 
 ### Changing Header Styles and Sizes
 
@@ -46,13 +45,13 @@ If `visualLevel` is not specified, `visualLevel` will default to the same value 
 Use the `visualLevel` attribute to control the visual style of the header.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/visualLevel.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/visual-level.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/visualLevel.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/visual-level.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -74,18 +73,20 @@ Below is how each `visualLevel` value corresponds to a typography class:
 
 These classes apply consistent typography styles, including font size, line height, font weight, and more, ensuring uniform header presentation across components.
 
+## Common Usage Patterns & Functional Examples
+
 ### Additional Header Examples
 
 Additional examples with various header `level` and `visualLevel` options.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/additionalExamples.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/additional-examples.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/additionalExamples.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/additional-examples.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -110,13 +111,13 @@ In some cases the margin between elements may need to be adjusted. To do this, a
 If there is a CSS selector that has the color definition you want to use with the header, simply wrap the header in a `div` or `span` and the auro-header component will inherit the color.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/colorInheritance.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/color-inheritance.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/colorInheritance.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/color-inheritance.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
