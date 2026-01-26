@@ -1,45 +1,49 @@
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=../docs/api.md) -->
-<!-- The below content is automatically added from ../docs/api.md -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/api.md) -->
+<!-- The below content is automatically added from ./../docs/api.md -->
 
 # auro-header
 
-The auro-header component is a custom element to make using headers with the Auro Design System seamless and easy.
+The `auro-header` element is a custom element to make using headers with the Auro Design System seamless and easy.
 
-## Properties
+### Properties & Attributes
 
-| Property      | Attribute     | Type     | Default                 | Description                                      |
-|---------------|---------------|----------|-------------------------|--------------------------------------------------|
-| [color](#color)       | `color`       | `string` |                         | (Deprecated) Allows user to pass in CSS custom property or direct hex value to change the color of the header. |
-| [display](#display)     | `display`     | `string` |                         | (Deprecated) Determines the visual appearance of the header. Options are `display`, `800`, `700`, `600`, `500`, `400`, `300`. |
-| [level](#level)       | `level`       | `number` | 1                       | Determines the semantic heading level of the HTML element. Options are `1` - `6`. |
-| [margin](#margin)      | `margin`      | `string` |                         | (Deprecated) Specify the margin(s) to be altered. Options are `top`, `bottom`, or `both`. |
-| [size](#size)        | `size`        | `string` |                         | (Deprecated) Specify size of margin adjustment, either `none`, `25`, `50`, `100`, `150`, `200`, `300`, `400`, `600` or `800`. |
-| [typography](#typography)  | `typography`  | `string` | "heading"               | Determines the font of heading, Options are `heading` or `display`. |
-| [visualLevel](#visualLevel) | `visualLevel` | `number` | "same value as `level`" | Determines the visual appearance of the header. Options are `1` - `6`. |
+| Properties  | Attributes  | Modifiers | Type   | Default | Description                                                                                                                   |
+| ----------- | ----------- | --------- | ------ | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| level       | level       |           | number |         | Determines the semantic heading level of the HTML element. Options are `1` - `6`.                                             |
+| typography  | typography  |           | string |         | Determines the font of heading, Options are `heading` or `display`.                                                           |
+| visualLevel | visualLevel |           | number | `1`     | Determines the visual appearance of the header. Options are `1` - `6`.                                                        |
+| color       | color       |           | string |         | (Deprecated) Allows user to pass in CSS custom property or direct hex value to change the color of the header.                |
+| display     | display     |           | string |         | (Deprecated) Determines the visual appearance of the header. Options are `display`, `800`, `700`, `600`, `500`, `400`, `300`. |
+| margin      | margin      |           | string |         | (Deprecated) Specify the margin(s) to be altered. Options are `top`, `bottom`, or `both`.                                     |
+| size        | size        |           | string |         | (Deprecated) Specify size of margin adjustment, either `none`, `25`, `50`, `100`, `150`, `200`, `300`, `400`, `600` or `800`. |
+
+### Methods
+
+| Name     | Parameters                                                          | Return | Description                                       |
+| -------- | ------------------------------------------------------------------- | ------ | ------------------------------------------------- |
+| register | `name` (string) - The name of element that you want to register to. |        | This will register this element with the browser. |
 <!-- AURO-GENERATED-CONTENT:END -->
 
-## API Examples
-
-### Basic
-
-The `auro-header` defaults to an `<h1>` element.
+## Basic
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/basic.html) -->
-  <!-- The below content is automatically added from ../apiExamples/basic.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/basic.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/basic.html -->
   <auro-header>Hello World!</auro-header>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/basic.html) -->
-<!-- The below code snippet is automatically added from ../apiExamples/basic.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/basic.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
 <auro-header>Hello World!</auro-header>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
+
+## Property & Attribute Examples
 
 ### Changing Header Styles and Sizes
 
@@ -72,8 +76,8 @@ If `visualLevel` is not specified, `visualLevel` will default to the same value 
 Use the `visualLevel` attribute to control the visual style of the header.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/visualLevel.html) -->
-  <!-- The below content is automatically added from ../apiExamples/visualLevel.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/visual-level.html) -->
+  <!-- The below content is automatically added from ../apiExamples/visual-level.html -->
   <table>
     <thead>
       <tr>
@@ -153,8 +157,8 @@ Use the `visualLevel` attribute to control the visual style of the header.
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/visualLevel.html) -->
-<!-- The below code snippet is automatically added from ../apiExamples/visualLevel.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/visual-level.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/visual-level.html -->
 
 ```html
 <table>
@@ -253,13 +257,15 @@ Below is how each `visualLevel` value corresponds to a typography class:
 
 These classes apply consistent typography styles, including font size, line height, font weight, and more, ensuring uniform header presentation across components.
 
+## Common Usage Patterns & Functional Examples
+
 ### Additional Header Examples
 
 Additional examples with various header `level` and `visualLevel` options.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/additionalExamples.html) -->
-  <!-- The below content is automatically added from ../apiExamples/additionalExamples.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/additional-examples.html) -->
+  <!-- The below content is automatically added from ../apiExamples/additional-examples.html -->
   <auro-header level="2" visualLevel="1">Hello World!</auro-header>
   <auro-header level="2" visualLevel="2">Hello World!</auro-header>
   <auro-header level="3" visualLevel="3">Hello World!</auro-header>
@@ -268,8 +274,8 @@ Additional examples with various header `level` and `visualLevel` options.
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/additionalExamples.html) -->
-<!-- The below code snippet is automatically added from ../apiExamples/additionalExamples.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/additional-examples.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/additional-examples.html -->
 
 ```html
 <auro-header level="2" visualLevel="1">Hello World!</auro-header>
@@ -313,8 +319,8 @@ In some cases the margin between elements may need to be adjusted. To do this, a
 If there is a CSS selector that has the color definition you want to use with the header, simply wrap the header in a `div` or `span` and the auro-header component will inherit the color.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/colorInheritance.html) -->
-  <!-- The below content is automatically added from ../apiExamples/colorInheritance.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/color-inheritance.html) -->
+  <!-- The below content is automatically added from ../apiExamples/color-inheritance.html -->
   <div style="color: var(--ds-color-alert-error-default)">
     <auro-header level="3" visualLevel="2">There has been an error</auro-header>
   </div>
@@ -322,8 +328,8 @@ If there is a CSS selector that has the color definition you want to use with th
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/colorInheritance.html) -->
-<!-- The below code snippet is automatically added from ../apiExamples/colorInheritance.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/color-inheritance.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/color-inheritance.html -->
 
 ```html
 <div style="color: var(--ds-color-alert-error-default)">
