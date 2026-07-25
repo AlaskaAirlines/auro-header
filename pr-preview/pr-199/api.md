@@ -1,0 +1,328 @@
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/api.md) -->
+<!-- The below content is automatically added from ./../docs/api.md -->
+
+# auro-header
+
+The `auro-header` element is a custom element to make using headers with the Auro Design System seamless and easy.
+
+### Properties & Attributes
+
+| Properties  | Attributes  | Modifiers | Type   | Default | Description                                                                                                                   |
+| ----------- | ----------- | --------- | ------ | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| level       | level       |           | number |         | Determines the semantic heading level of the HTML element. Options are `1` - `6`.                                             |
+| typography  | typography  |           | string |         | Determines the font of heading, Options are `heading` or `display`.                                                           |
+| visualLevel | visualLevel |           | number | `1`     | Determines the visual appearance of the header. Options are `1` - `6`.                                                        |
+| color       | color       |           | string |         | (Deprecated) Allows user to pass in CSS custom property or direct hex value to change the color of the header.                |
+| display     | display     |           | string |         | (Deprecated) Determines the visual appearance of the header. Options are `display`, `800`, `700`, `600`, `500`, `400`, `300`. |
+| margin      | margin      |           | string |         | (Deprecated) Specify the margin(s) to be altered. Options are `top`, `bottom`, or `both`.                                     |
+| size        | size        |           | string |         | (Deprecated) Specify size of margin adjustment, either `none`, `25`, `50`, `100`, `150`, `200`, `300`, `400`, `600` or `800`. |
+
+### Methods
+
+| Name     | Parameters                                                          | Return | Description                                       |
+| -------- | ------------------------------------------------------------------- | ------ | ------------------------------------------------- |
+| register | `name` (string) - The name of element that you want to register to. |        | This will register this element with the browser. |
+<!-- AURO-GENERATED-CONTENT:END -->
+
+## Basic
+
+<div class="exampleWrapper">
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/basic.html) -->
+<!-- The below content is automatically added from ./../apiExamples/basic.html -->
+<auro-header>Hello World!</auro-header>
+<!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+<span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/basic.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
+
+<pre class="language-html"><code class="language-html">&lt;auro-header&gt;Hello World!&lt;/auro-header&gt;</code></pre>
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+## Property & Attribute Examples
+
+### Changing Header Styles and Sizes
+
+The `auro-header` component allows for flexible customization of both HTML semantics and visual appearance styles.
+
+#### Header Level (HTML Semantics)
+
+Use the `level` attribute to control the semantic heading level (`<h1>` through `<h6>`).
+
+If `visualLevel` is not specified, `visualLevel` will default to the same value as `level`.
+
+<div class="exampleWrapper">
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/level.html) -->
+<!-- The below content is automatically added from ../apiExamples/level.html -->
+<auro-header level="3">Hello World!</auro-header>
+<!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+<span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/level.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/level.html -->
+
+<pre class="language-html"><code class="language-html">&lt;auro-header level="3"&gt;Hello World!&lt;/auro-header&gt;</code></pre>
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+#### Header Style (Visual Appearance) <a name="visualLevel"></a>
+Use the `visualLevel` attribute to control the visual style of the header.
+
+<div class="exampleWrapper">
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/visual-level.html) -->
+<!-- The below content is automatically added from ../apiExamples/visual-level.html -->
+<table>
+<thead>
+<tr>
+<th>visualLevel</th>
+<th>typography="heading"</th>
+<th>typography="display"</th>
+</tr>
+</thead>
+<tr>
+<td>
+        1
+</td>
+<td>
+<auro-header visualLevel="1">Extra large heading</auro-header>
+</td>
+<td>
+<auro-header visualLevel="1" typography="display">2 Extra large display</auro-header>
+</td>
+</tr>
+<tr>
+<td>
+        2
+</td>
+<td>
+<auro-header visualLevel="2">Large heading</auro-header>
+</td>
+<td>
+<auro-header visualLevel="2" typography="display">Extra large display</auro-header>
+</td>
+</tr>
+<tr>
+<td>
+        3
+</td>
+<td>
+<auro-header visualLevel="3">Medium heading</auro-header>
+</td>
+<td>
+<auro-header visualLevel="3" typography="display">Large display</auro-header>
+</td>
+</tr>
+<tr>
+<td>
+        4
+</td>
+<td>
+<auro-header visualLevel="4">Small heading</auro-header>
+</td>
+<td>
+<auro-header visualLevel="4" typography="display">Medium display</auro-header>
+</td>
+</tr>
+<tr>
+<td>
+        5
+</td>
+<td>
+<auro-header visualLevel="5">Extra small heading</auro-header>
+</td>
+<td>
+<auro-header visualLevel="5" typography="display">Small display</auro-header>
+</td>
+</tr>
+<tr>
+<td>
+        6
+</td>
+<td>
+<auro-header visualLevel="6">2 Extra small heading</auro-header>
+</td>
+<td>
+<auro-header visualLevel="6" typography="display">Extra small display</auro-header>
+</td>
+</tr>
+</table>
+<!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+<span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/visual-level.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/visual-level.html -->
+
+<pre class="language-html"><code class="language-html">&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;visualLevel&lt;/th&gt;
+      &lt;th&gt;typography="heading"&lt;/th&gt;
+      &lt;th&gt;typography="display"&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      1
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;auro-header visualLevel="1"&gt;Extra large heading&lt;/auro-header&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;auro-header visualLevel="1" typography="display"&gt;2 Extra large display&lt;/auro-header&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      2
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;auro-header visualLevel="2"&gt;Large heading&lt;/auro-header&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;auro-header visualLevel="2" typography="display"&gt;Extra large display&lt;/auro-header&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      3
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;auro-header visualLevel="3"&gt;Medium heading&lt;/auro-header&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;auro-header visualLevel="3" typography="display"&gt;Large display&lt;/auro-header&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      4
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;auro-header visualLevel="4"&gt;Small heading&lt;/auro-header&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;auro-header visualLevel="4" typography="display"&gt;Medium display&lt;/auro-header&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      5
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;auro-header visualLevel="5"&gt;Extra small heading&lt;/auro-header&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;auro-header visualLevel="5" typography="display"&gt;Small display&lt;/auro-header&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      6
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;auro-header visualLevel="6"&gt;2 Extra small heading&lt;/auro-header&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;auro-header visualLevel="6" typography="display"&gt;Extra small display&lt;/auro-header&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+#### Typography <a name="typography"></a> to Heading CSS Class Mapping
+
+The `visualLevel` attribute controls the visual style of the header by mapping to specific <a href="https://auro.alaskaair.com/typography/usage" target="_blank">typography classes</a>.
+
+Below is how each `visualLevel` value corresponds to a typography class:
+
+| visualLevel | `typography="heading"`    |  `typography="display"`  |
+|-----------------|---------------|---------------|
+| `1`           | `heading-xl` | `display-2xl` |
+| `2`           | `heading-lg`  | `display-xl`  |
+| `3`           | `heading-md`  | `display-lg`   |
+| `4`           | `heading-sm`  | `display-md`   |
+| `5`           | `heading-xs`  | `display-sm`   |
+| `6`           | `heading-2xs` | `display-xs`   |
+
+These classes apply consistent typography styles, including font size, line height, font weight, and more, ensuring uniform header presentation across components.
+
+## Common Usage Patterns & Functional Examples
+
+### Additional Header Examples
+
+Additional examples with various header `level` and `visualLevel` options.
+
+<div class="exampleWrapper">
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/additional-examples.html) -->
+<!-- The below content is automatically added from ../apiExamples/additional-examples.html -->
+<auro-header level="2" visualLevel="1">Hello World!</auro-header>
+<auro-header level="2" visualLevel="2">Hello World!</auro-header>
+<auro-header level="3" visualLevel="3">Hello World!</auro-header>
+<auro-header level="5" visualLevel="4">Hello World!</auro-header>
+<!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+<span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/additional-examples.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/additional-examples.html -->
+
+<pre class="language-html"><code class="language-html">&lt;auro-header level="2" visualLevel="1"&gt;Hello World!&lt;/auro-header&gt;
+&lt;auro-header level="2" visualLevel="2"&gt;Hello World!&lt;/auro-header&gt;
+&lt;auro-header level="3" visualLevel="3"&gt;Hello World!&lt;/auro-header&gt;
+&lt;auro-header level="5" visualLevel="4"&gt;Hello World!&lt;/auro-header&gt;</code></pre>
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### Adjust Margins
+
+In some cases the margin between elements may need to be adjusted. To do this, add margin using css style.
+<div class="exampleWrapper">
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/margins.html) -->
+<!-- The below content is automatically added from ../apiExamples/margins.html -->
+<auro-header level="2" visualLevel="4" style="margin-bottom: var(--ds-size-400)">Hello World!</auro-header>
+<ol>
+<li>... thing</li>
+<li>thing ...</li>
+</ol>
+<!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+<span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/margins.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/margins.html -->
+
+<pre class="language-html"><code class="language-html">&lt;auro-header level="2" visualLevel="4" style="margin-bottom: var(--ds-size-400)"&gt;Hello World!&lt;/auro-header&gt;
+&lt;ol&gt;
+  &lt;li&gt;... thing&lt;/li&gt;
+  &lt;li&gt;thing ...&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### Color Inheritance
+
+If there is a CSS selector that has the color definition you want to use with the header, simply wrap the header in a `div` or `span` and the auro-header component will inherit the color.
+
+<div class="exampleWrapper">
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/color-inheritance.html) -->
+<!-- The below content is automatically added from ../apiExamples/color-inheritance.html -->
+<div style="color: var(--ds-color-alert-error-default)">
+<auro-header level="3" visualLevel="2">There has been an error</auro-header>
+</div>
+<!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+<span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/color-inheritance.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/color-inheritance.html -->
+
+<pre class="language-html"><code class="language-html">&lt;div style="color: var(--ds-color-alert-error-default)"&gt;
+  &lt;auro-header level="3" visualLevel="2"&gt;There has been an error&lt;/auro-header&gt;
+&lt;/div&gt;</code></pre>
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
