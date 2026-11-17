@@ -6,7 +6,7 @@ Renders a page or content heading with Auro typography, so you set the heading l
 
 - **Semantic level**: Sets the heading element, from `<h1>` to `<h6>`, with `level`.
 - **Visual style**: Changes how the heading looks without changing its level, with `visualLevel`.
-- **Font**: Switches between heading and display styles with `typography`.
+- **Display font**: Switches from heading styles to display styles with `typography="display"`.
 
 **Example**
 
