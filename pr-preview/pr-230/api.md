@@ -322,7 +322,7 @@ To use a color from your page styles, wrap the header in a `div` or `span` that 
 <div class="exampleWrapper">
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/color-inheritance.html) -->
 <!-- The below content is automatically added from ../apiExamples/color-inheritance.html -->
-<div style="color: var(--ds-color-text-error-default)">
+<div style="color: var(--ds-basic-color-status-error)">
 <auro-header level="3" visualLevel="2">There has been an error</auro-header>
 </div>
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -332,7 +332,7 @@ To use a color from your page styles, wrap the header in a `div` or `span` that 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/color-inheritance.html) -->
 <!-- The below code snippet is automatically added from ../apiExamples/color-inheritance.html -->
 
-<pre class="language-html"><code class="language-html">&lt;div style="color: var(--ds-color-text-error-default)"&gt;
+<pre class="language-html"><code class="language-html">&lt;div style="color: var(--ds-basic-color-status-error)"&gt;
   &lt;auro-header level="3" visualLevel="2"&gt;There has been an error&lt;/auro-header&gt;
 &lt;/div&gt;</code></pre>
 <!-- AURO-GENERATED-CONTENT:END -->
