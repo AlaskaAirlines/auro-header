@@ -94,7 +94,7 @@ export class AuroHeader extends LitElement {
 
       /**
        * Deprecated: Use a CSS `margin` style on the element instead.
-       * Sets which side `size` adds space to: `top`, `bottom`, or `both`.
+       * Sets which side `size` adds space to: `top`, `bottom`, or `both`. The space does not currently appear, because the header's styles set its margin to `0`.
        * @deprecated Use a CSS `margin` style on the element instead.
        */
       margin: {
@@ -104,7 +104,7 @@ export class AuroHeader extends LitElement {
 
       /**
        * Deprecated: Use a CSS `margin` style on the element instead.
-       * Sets how much space `margin` adds, using `none`, `25`, `50`, `100`, `150`, `200`, `300`, `400`, `600`, or `800`. The value `600` does not currently work when `margin` is `top` or `bottom`.
+       * Sets how much space `margin` adds, using `none`, `25`, `50`, `100`, `150`, `200`, `300`, `400`, `600`, or `800`. The space does not currently appear, because the header's styles set its margin to `0`.
        * @deprecated Use a CSS `margin` style on the element instead.
        */
       size: {
