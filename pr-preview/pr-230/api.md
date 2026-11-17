@@ -9,7 +9,7 @@ Renders a page or content heading with Auro typography, so you set the heading l
 
 - **Semantic level**: Sets the heading element, from `<h1>` to `<h6>`, with `level`.
 - **Visual style**: Changes how the heading looks without changing its level, with `visualLevel`.
-- **Font**: Switches between heading and display styles with `typography`.
+- **Display font**: Switches from heading styles to display styles with `typography="display"`.
 
 **Example**
 
@@ -100,7 +100,7 @@ Use the `visualLevel` attribute to control the visual style of the header.
 <auro-header visualLevel="1">Extra large heading</auro-header>
 </td>
 <td>
-<auro-header visualLevel="1" typography="display">2 Extra large display</auro-header>
+<auro-header visualLevel="1" typography="display">Double extra large display</auro-header>
 </td>
 </tr>
 <tr>
@@ -152,7 +152,7 @@ Use the `visualLevel` attribute to control the visual style of the header.
         6
 </td>
 <td>
-<auro-header visualLevel="6">2 Extra small heading</auro-header>
+<auro-header visualLevel="6">Double extra small heading</auro-header>
 </td>
 <td>
 <auro-header visualLevel="6" typography="display">Extra small display</auro-header>
@@ -182,7 +182,7 @@ Use the `visualLevel` attribute to control the visual style of the header.
       &lt;auro-header visualLevel="1"&gt;Extra large heading&lt;/auro-header&gt;
     &lt;/td&gt;
     &lt;td&gt;
-      &lt;auro-header visualLevel="1" typography="display"&gt;2 Extra large display&lt;/auro-header&gt;
+      &lt;auro-header visualLevel="1" typography="display"&gt;Double extra large display&lt;/auro-header&gt;
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
@@ -234,7 +234,7 @@ Use the `visualLevel` attribute to control the visual style of the header.
       6
     &lt;/td&gt;
     &lt;td&gt;
-      &lt;auro-header visualLevel="6"&gt;2 Extra small heading&lt;/auro-header&gt;
+      &lt;auro-header visualLevel="6"&gt;Double extra small heading&lt;/auro-header&gt;
     &lt;/td&gt;
     &lt;td&gt;
       &lt;auro-header visualLevel="6" typography="display"&gt;Extra small display&lt;/auro-header&gt;
@@ -273,7 +273,7 @@ See more examples that combine `level` and `visualLevel`.
 <auro-header level="2" visualLevel="1">Hello World!</auro-header>
 <auro-header level="2" visualLevel="2">Hello World!</auro-header>
 <auro-header level="3" visualLevel="3">Hello World!</auro-header>
-<auro-header level="5" visualLevel="4">Hello World!</auro-header>
+<auro-header level="4" visualLevel="3">Hello World!</auro-header>
 <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
@@ -284,7 +284,7 @@ See more examples that combine `level` and `visualLevel`.
 <pre class="language-html"><code class="language-html">&lt;auro-header level="2" visualLevel="1"&gt;Hello World!&lt;/auro-header&gt;
 &lt;auro-header level="2" visualLevel="2"&gt;Hello World!&lt;/auro-header&gt;
 &lt;auro-header level="3" visualLevel="3"&gt;Hello World!&lt;/auro-header&gt;
-&lt;auro-header level="5" visualLevel="4"&gt;Hello World!&lt;/auro-header&gt;</code></pre>
+&lt;auro-header level="4" visualLevel="3"&gt;Hello World!&lt;/auro-header&gt;</code></pre>
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
