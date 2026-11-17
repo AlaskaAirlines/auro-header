@@ -1,3 +1,3 @@
-The `<auro-header>` element is for rendering page or content headers without having to deal with font styling. Simply choose the level of the header you want and the style type.
+Renders a page or content heading with Auro typography, so you don't need to set font styles yourself. Set `level` for the semantic heading and `visualLevel` for how it looks. Any combination of the two works.
 
-The `<auro-header>` element is able to take any combination of options for heading levels and display options. See [Auro's header usage guidelines](https://auro.alaskaair.com/typography/usage) for additional examples sans web component dependency.
+See [Auro's header usage guidelines](https://auro.alaskaair.com/typography/usage) for examples that don't use the web component.
