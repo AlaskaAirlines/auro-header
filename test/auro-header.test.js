@@ -11,6 +11,31 @@ describe("auro-header", () => {
     expect(heading.className).to.include("heading-xl");
   });
 
+  it("follows level for the visual style when visualLevel isn't set", async () => {
+    const el = await fixture(html`<auro-header level="1">Hello World!</auro-header>`);
+
+    el.level = 3;
+    await el.updateComplete;
+
+    const heading = el.shadowRoot.querySelector("h3");
+    expect(heading.className).to.include("heading-md");
+  });
+
+  it("doesn't write the fallback visual style back to visualLevel", async () => {
+    const el = await fixture(html`<auro-header level="3">Hello World!</auro-header>`);
+
+    expect(el.visualLevel).to.equal(undefined);
+    expect(el.hasAttribute("visualLevel")).to.equal(false);
+  });
+
+  it("uses the deprecated display value when visualLevel isn't set", async () => {
+    const el = await fixture(html`<auro-header level="3" display="700">Hello World!</auro-header>`);
+
+    const heading = el.shadowRoot.querySelector("h3");
+    expect(heading.className).to.include("heading-lg");
+    expect(heading.className).to.not.include("heading-md");
+  });
+
   it("sets correct heading element", async () => {
     const el = await fixture(html`
       <auro-header level="1" visualLevel="1" color="orange">Hello World!</auro-header>

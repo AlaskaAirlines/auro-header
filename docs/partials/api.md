@@ -26,7 +26,7 @@ Set the semantic heading level and the visual style of a header separately.
 
 Use the `level` attribute to control the semantic heading level (`<h1>` through `<h6>`).
 
-When you don't set `visualLevel`, it uses the value of `level`.
+When you don't set `visualLevel`, it uses the value of `level`, including after `level` changes.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/level.html) -->

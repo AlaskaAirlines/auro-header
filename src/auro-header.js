@@ -122,7 +122,7 @@ export class AuroHeader extends LitElement {
       },
 
       /**
-       * Sets the visual style of the header, from `1` (largest) to `6` (smallest), independent of its heading level. Uses the value of `level` when not set.
+       * Sets the visual style of the header, from `1` (largest) to `6` (smallest), independent of its heading level. Uses the value of `level` when not set, unless the deprecated `display` is set.
        */
       visualLevel: {
         type: Number,
@@ -275,9 +275,8 @@ export class AuroHeader extends LitElement {
    * @returns {import("lit").TemplateResult} - The heading template.
    */
   template(level) {
-    if (!this.visualLevel && !this.display) {
-      this.visualLevel = this.level;
-    }
+    // Follow `level` when `visualLevel` isn't set, without writing it back to the property.
+    const visualLevel = this.visualLevel || (this.display ? undefined : this.level);
 
     const headingLevel = level || "1";
     // THIS SHOULD BE REMOVED AS MARGIN AND SIZE ARE DEPRECATED.
@@ -285,8 +284,8 @@ export class AuroHeader extends LitElement {
 
     // Get the CSS class based on typography and display prop
     // THIS SHOULD BE CHANGED NOT TO USE `this.display` AS IT"S DEPRECATED.
-    const headingClass = this.visualLevel
-      ? AuroHeader.displayClassMap[this.typography][this.visualLevel]
+    const headingClass = visualLevel
+      ? AuroHeader.displayClassMap[this.typography][visualLevel]
       : AuroHeader.displayClassMap[this.display];
 
     const classObject = {
