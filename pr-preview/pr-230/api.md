@@ -17,15 +17,15 @@ Renders a page or content heading with Auro typography, so you set the heading l
 
 ### Properties and attributes
 
-| Properties  | Attributes  | Modifiers | Type   | Default   | Description                                                                                                                                                                                                                                                  |
-| ----------- | ----------- | --------- | ------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| level       | level       |           | number | `1`       | Sets the semantic heading level, from `1` for `<h1>` to `6` for `<h6>`. Use the level that fits the page outline, and use `visualLevel` to change how the header looks.                                                                                      |
-| typography  | typography  |           | string | `heading` | Sets the typography family of the header: `heading` for heading styles or `display` for display styles. The `visualLevel` picks the size within that family.                                                                                                 |
-| visualLevel | visualLevel |           | number |           | Sets the visual style of the header, from `1` (largest) to `6` (smallest), independent of its heading level. Uses the value of `level` when not set, unless the deprecated `display` is set.                                                                 |
-| color       | color       |           | string |           | Deprecated: Use a parent element's CSS `color` instead; the header inherits it.<br>Sets the color of the header text with any CSS color value, such as a hex value or a custom property.                                                                     |
-| display     | display     |           | string |           | Deprecated: Use `visualLevel` and `typography` instead.<br>Sets the visual style when `visualLevel` isn't set, using `800`, `700`, `600`, `500`, `400`, or `300`. The value `display` does not currently work.                                               |
-| margin      | margin      |           | string |           | Deprecated: Use a CSS `margin` style on the element instead.<br>Sets which side `size` adds space to: `top`, `bottom`, or `both`.                                                                                                                            |
-| size        | size        |           | string |           | Deprecated: Use a CSS `margin` style on the element instead.<br>Sets how much space `margin` adds, using `none`, `25`, `50`, `100`, `150`, `200`, `300`, `400`, `600`, or `800`. The value `600` does not currently work when `margin` is `top` or `bottom`. |
+| Properties  | Attributes  | Modifiers | Type   | Default   | Description                                                                                                                                                                                                                                                              |
+| ----------- | ----------- | --------- | ------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| level       | level       |           | number | `1`       | Sets the semantic heading level, from `1` for `<h1>` to `6` for `<h6>`. Use the level that fits the page outline, and use `visualLevel` to change how the header looks.                                                                                                  |
+| typography  | typography  |           | string | `heading` | Sets the typography family of the header: `heading` for heading styles or `display` for display styles. The `visualLevel` picks the size within that family.                                                                                                             |
+| visualLevel | visualLevel |           | number |           | Sets the visual style of the header, from `1` (largest) to `6` (smallest), independent of its heading level. Uses the value of `level` when not set, unless the deprecated `display` is set.                                                                             |
+| color       | color       |           | string |           | Deprecated: Use a parent element's CSS `color` instead; the header inherits it.<br>Sets the color of the header text with any CSS color value, such as a hex value or a custom property.                                                                                 |
+| display     | display     |           | string |           | Deprecated: Use `visualLevel` and `typography` instead.<br>Sets the visual style when `visualLevel` isn't set, using `800`, `700`, `600`, `500`, `400`, or `300`. The value `display` does not currently work.                                                           |
+| margin      | margin      |           | string |           | Deprecated: Use a CSS `margin` style on the element instead.<br>Sets which side `size` adds space to: `top`, `bottom`, or `both`. The space does not currently appear, because the header's styles set its margin to `0`.                                                |
+| size        | size        |           | string |           | Deprecated: Use a CSS `margin` style on the element instead.<br>Sets how much space `margin` adds, using `none`, `25`, `50`, `100`, `150`, `200`, `300`, `400`, `600`, or `800`. The space does not currently appear, because the header's styles set its margin to `0`. |
 
 ### Methods
 
@@ -94,7 +94,7 @@ Use the `visualLevel` attribute to control the visual style of the header.
 </thead>
 <tr>
 <td>
-        1
+<code>1</code>
 </td>
 <td>
 <auro-header visualLevel="1">Extra large heading</auro-header>
@@ -105,7 +105,7 @@ Use the `visualLevel` attribute to control the visual style of the header.
 </tr>
 <tr>
 <td>
-        2
+<code>2</code>
 </td>
 <td>
 <auro-header visualLevel="2">Large heading</auro-header>
@@ -116,7 +116,7 @@ Use the `visualLevel` attribute to control the visual style of the header.
 </tr>
 <tr>
 <td>
-        3
+<code>3</code>
 </td>
 <td>
 <auro-header visualLevel="3">Medium heading</auro-header>
@@ -127,7 +127,7 @@ Use the `visualLevel` attribute to control the visual style of the header.
 </tr>
 <tr>
 <td>
-        4
+<code>4</code>
 </td>
 <td>
 <auro-header visualLevel="4">Small heading</auro-header>
@@ -138,7 +138,7 @@ Use the `visualLevel` attribute to control the visual style of the header.
 </tr>
 <tr>
 <td>
-        5
+<code>5</code>
 </td>
 <td>
 <auro-header visualLevel="5">Extra small heading</auro-header>
@@ -149,7 +149,7 @@ Use the `visualLevel` attribute to control the visual style of the header.
 </tr>
 <tr>
 <td>
-        6
+<code>6</code>
 </td>
 <td>
 <auro-header visualLevel="6">Double extra small heading</auro-header>
@@ -176,7 +176,7 @@ Use the `visualLevel` attribute to control the visual style of the header.
   &lt;/thead&gt;
   &lt;tr&gt;
     &lt;td&gt;
-      1
+      &lt;code&gt;1&lt;/code&gt;
     &lt;/td&gt;
     &lt;td&gt;
       &lt;auro-header visualLevel="1"&gt;Extra large heading&lt;/auro-header&gt;
@@ -187,7 +187,7 @@ Use the `visualLevel` attribute to control the visual style of the header.
   &lt;/tr&gt;
   &lt;tr&gt;
     &lt;td&gt;
-      2
+      &lt;code&gt;2&lt;/code&gt;
     &lt;/td&gt;
     &lt;td&gt;
       &lt;auro-header visualLevel="2"&gt;Large heading&lt;/auro-header&gt;
@@ -198,7 +198,7 @@ Use the `visualLevel` attribute to control the visual style of the header.
   &lt;/tr&gt;
   &lt;tr&gt;
     &lt;td&gt;
-      3
+      &lt;code&gt;3&lt;/code&gt;
     &lt;/td&gt;
     &lt;td&gt;
       &lt;auro-header visualLevel="3"&gt;Medium heading&lt;/auro-header&gt;
@@ -209,7 +209,7 @@ Use the `visualLevel` attribute to control the visual style of the header.
   &lt;/tr&gt;
   &lt;tr&gt;
     &lt;td&gt;
-      4
+      &lt;code&gt;4&lt;/code&gt;
     &lt;/td&gt;
     &lt;td&gt;
       &lt;auro-header visualLevel="4"&gt;Small heading&lt;/auro-header&gt;
@@ -220,7 +220,7 @@ Use the `visualLevel` attribute to control the visual style of the header.
   &lt;/tr&gt;
   &lt;tr&gt;
     &lt;td&gt;
-      5
+      &lt;code&gt;5&lt;/code&gt;
     &lt;/td&gt;
     &lt;td&gt;
       &lt;auro-header visualLevel="5"&gt;Extra small heading&lt;/auro-header&gt;
@@ -231,7 +231,7 @@ Use the `visualLevel` attribute to control the visual style of the header.
   &lt;/tr&gt;
   &lt;tr&gt;
     &lt;td&gt;
-      6
+      &lt;code&gt;6&lt;/code&gt;
     &lt;/td&gt;
     &lt;td&gt;
       &lt;auro-header visualLevel="6"&gt;Double extra small heading&lt;/auro-header&gt;
