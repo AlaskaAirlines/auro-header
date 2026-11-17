@@ -15,7 +15,20 @@ import styleCss from "./styles/style.scss";
 const MAX_LEVEL = 6;
 
 /**
- * The `auro-header` element is a custom element to make using headers with the Auro Design System seamless and easy.
+ * Renders a page or content heading with Auro typography, so you set the heading level and the visual style separately.
+ *
+ * **Key capabilities**
+ *
+ * - **Semantic level**: Sets the heading element, from `<h1>` to `<h6>`, with `level`.
+ * - **Visual style**: Changes how the heading looks without changing its level, with `visualLevel`.
+ * - **Font**: Switches between heading and display styles with `typography`.
+ *
+ * **Example**
+ *
+ * ```html
+ * <auro-header level="2" visualLevel="4">Hello World!</auro-header>
+ * ```
+ * @summary An accessible heading with a separate semantic level and visual style, using Auro typography.
  * @customElement auro-header
  */
 export class AuroHeader extends LitElement {
@@ -40,8 +53,9 @@ export class AuroHeader extends LitElement {
   static get properties() {
     return {
       /**
-       * (Deprecated) Allows user to pass in CSS custom property or direct hex value to change the color of the header.
-       * @deprecated
+       * Deprecated: Use a parent element's CSS `color` instead; the header inherits it.
+       * Sets the color of the header text with any CSS color value, such as a hex value or a custom property.
+       * @deprecated Use a parent element's CSS `color` instead; the header inherits it.
        */
       color: {
         type: String,
@@ -49,8 +63,9 @@ export class AuroHeader extends LitElement {
       },
 
       /**
-       * (Deprecated) Determines the visual appearance of the header. Options are `display`, `800`, `700`, `600`, `500`, `400`, `300`.
-       * @deprecated
+       * Deprecated: Use `visualLevel` and `typography` instead.
+       * Sets the visual style when `visualLevel` isn't set, using `800`, `700`, `600`, `500`, `400`, or `300`. The value `display` does not currently work.
+       * @deprecated Use `visualLevel` and `typography` instead.
        */
       display: {
         type: String,
@@ -58,7 +73,8 @@ export class AuroHeader extends LitElement {
       },
 
       /**
-       *  Determines the semantic heading level of the HTML element. Options are `1` - `6`.
+       * Sets the semantic heading level, from `1` for `<h1>` to `6` for `<h6>`. Use the level that fits the page outline, and use `visualLevel` to change how the header looks.
+       * @default 1
        */
       level: {
         type: Number,
@@ -77,8 +93,9 @@ export class AuroHeader extends LitElement {
       },
 
       /**
-       * (Deprecated) Specify the margin(s) to be altered. Options are `top`, `bottom`, or `both`.
-       * @deprecated
+       * Deprecated: Use a CSS `margin` style on the element instead.
+       * Sets which side `size` adds space to: `top`, `bottom`, or `both`.
+       * @deprecated Use a CSS `margin` style on the element instead.
        */
       margin: {
         type: String,
@@ -86,8 +103,9 @@ export class AuroHeader extends LitElement {
       },
 
       /**
-       * (Deprecated) Specify size of margin adjustment, either `none`, `25`, `50`, `100`, `150`, `200`, `300`, `400`, `600` or `800`.
-       * @deprecated
+       * Deprecated: Use a CSS `margin` style on the element instead.
+       * Sets how much space `margin` adds, using `none`, `25`, `50`, `100`, `150`, `200`, `300`, `400`, `600`, or `800`. The value `600` does not currently work when `margin` is `top` or `bottom`.
+       * @deprecated Use a CSS `margin` style on the element instead.
        */
       size: {
         type: String,
@@ -95,7 +113,8 @@ export class AuroHeader extends LitElement {
       },
 
       /**
-       * Determines the font of heading, Options are `heading` or `display`.
+       * Sets the typography family of the header: `heading` for heading styles or `display` for display styles. The `visualLevel` picks the size within that family.
+       * @default heading
        */
       typography: {
         type: String,
@@ -103,8 +122,7 @@ export class AuroHeader extends LitElement {
       },
 
       /**
-       * Determines the visual appearance of the header. Options are `1` - `6`.
-       * @default 1
+       * Sets the visual style of the header, from `1` (largest) to `6` (smallest), independent of its heading level. Uses the value of `level` when not set.
        */
       visualLevel: {
         type: Number,
@@ -163,11 +181,11 @@ export class AuroHeader extends LitElement {
   }
 
   /**
-   * This will register this element with the browser.
-   * @param {string} [name="auro-header"] - The name of element that you want to register to.
+   * Registers the element with the browser under a tag name.
+   * @param {string} [name="auro-header"] - The tag name to register the element under.
    *
    * @example
-   * AuroHeader.register("custom-header") // this will register this element to <custom-header/>
+   * AuroHeader.register("custom-header") // Registers the element as <custom-header>.
    *
    */
   static register(name = "auro-header") {
@@ -180,11 +198,11 @@ export class AuroHeader extends LitElement {
   }
 
   /**
-   * Determines if the spacing is to be applied uniform or individual.
-   * @deprecated THiS SHOULD BE REMOVED.
+   * Gets the margin class names for the size, on both sides or on one side.
+   * @deprecated Remove this with the deprecated `margin` and `size` properties.
    * @private
-   * @param {string} size - Accepts string for size definition.
-   * @returns {string} - Returns either selectors or function.
+   * @param {string} size - The margin size, such as `none` or `25`.
+   * @returns {string} - The margin class names, or an empty string when the size isn't recognized.
    */
   spacingDecision(size) {
     if (this.margin === "both") {
@@ -217,11 +235,11 @@ export class AuroHeader extends LitElement {
   }
 
   /**
-   * If spacing is individual, return will be single selector based on input.
-   * @deprecated THiS SHOULD BE REMOVED.
+   * Gets the margin class name for the size on the side set by `margin`.
+   * @deprecated Remove this with the deprecated `margin` and `size` properties.
    * @private
-   * @param {string} size - Accepts string for size definition.
-   * @returns {string} - Returns selector.
+   * @param {string} size - The margin size, such as `none` or `25`.
+   * @returns {string} - The margin class name, or an empty string when the size isn't recognized.
    */
   spacingApplied(size) {
     switch (size) {
@@ -251,10 +269,10 @@ export class AuroHeader extends LitElement {
   }
 
   /**
-   * Creates HTML template for use in render function.
+   * Creates the heading template that `render` uses.
    * @private
-   * @param {string} level - Accepts string value.
-   * @returns {string} - Returns HTML template.
+   * @param {number|string} [level] - The heading level, from `1` to `6`. Uses `1` when not set.
+   * @returns {import("lit").TemplateResult} - The heading template.
    */
   template(level) {
     if (!this.visualLevel && !this.display) {
