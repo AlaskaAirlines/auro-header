@@ -21,7 +21,7 @@ Renders a page or content heading with Auro typography, so you set the heading l
 | ----------- | ----------- | --------- | ------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | level       | level       |           | number | `1`       | Sets the semantic heading level, from `1` for `<h1>` to `6` for `<h6>`. Use the level that fits the page outline, and use `visualLevel` to change how the header looks.                                                                                      |
 | typography  | typography  |           | string | `heading` | Sets the typography family of the header: `heading` for heading styles or `display` for display styles. The `visualLevel` picks the size within that family.                                                                                                 |
-| visualLevel | visualLevel |           | number |           | Sets the visual style of the header, from `1` (largest) to `6` (smallest), independent of its heading level. Uses the value of `level` when not set.                                                                                                         |
+| visualLevel | visualLevel |           | number |           | Sets the visual style of the header, from `1` (largest) to `6` (smallest), independent of its heading level. Uses the value of `level` when not set, unless the deprecated `display` is set.                                                                 |
 | color       | color       |           | string |           | Deprecated: Use a parent element's CSS `color` instead; the header inherits it.<br>Sets the color of the header text with any CSS color value, such as a hex value or a custom property.                                                                     |
 | display     | display     |           | string |           | Deprecated: Use `visualLevel` and `typography` instead.<br>Sets the visual style when `visualLevel` isn't set, using `800`, `700`, `600`, `500`, `400`, or `300`. The value `display` does not currently work.                                               |
 | margin      | margin      |           | string |           | Deprecated: Use a CSS `margin` style on the element instead.<br>Sets which side `size` adds space to: `top`, `bottom`, or `both`.                                                                                                                            |
@@ -61,7 +61,7 @@ Set the semantic heading level and the visual style of a header separately.
 
 Use the `level` attribute to control the semantic heading level (`<h1>` through `<h6>`).
 
-When you don't set `visualLevel`, it uses the value of `level`.
+When you don't set `visualLevel`, it uses the value of `level`, including after `level` changes.
 
 <div class="exampleWrapper">
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/level.html) -->
@@ -322,7 +322,7 @@ To use a color from your page styles, wrap the header in a `div` or `span` that 
 <div class="exampleWrapper">
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/color-inheritance.html) -->
 <!-- The below content is automatically added from ../apiExamples/color-inheritance.html -->
-<div style="color: var(--ds-color-alert-error-default)">
+<div style="color: var(--ds-color-text-error-default)">
 <auro-header level="3" visualLevel="2">There has been an error</auro-header>
 </div>
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -332,7 +332,7 @@ To use a color from your page styles, wrap the header in a `div` or `span` that 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/color-inheritance.html) -->
 <!-- The below code snippet is automatically added from ../apiExamples/color-inheritance.html -->
 
-<pre class="language-html"><code class="language-html">&lt;div style="color: var(--ds-color-alert-error-default)"&gt;
+<pre class="language-html"><code class="language-html">&lt;div style="color: var(--ds-color-text-error-default)"&gt;
   &lt;auro-header level="3" visualLevel="2"&gt;There has been an error&lt;/auro-header&gt;
 &lt;/div&gt;</code></pre>
 <!-- AURO-GENERATED-CONTENT:END -->
