@@ -6,4 +6,4 @@ import { AuroHeader } from '@aurodesignsystem/auro-header/class';
 AuroHeader.register('custom-header');
 ```
 
-This will create a new custom element `<custom-header>` that behaves exactly like `<auro-header>`, allowing both to coexist on the same page without interfering with each other.
+This creates a custom element `<custom-header>` that behaves exactly like `<auro-header>`, so both can coexist on the same page without interfering with each other.

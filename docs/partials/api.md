@@ -16,17 +16,17 @@
 
 </auro-accordion>
 
-## Property & Attribute Examples
+## Property and attribute examples
 
-### Changing Header Styles and Sizes
+### Change header styles and sizes
 
-The `auro-header` component allows for flexible customization of both HTML semantics and visual appearance styles.
+Set the semantic heading level and the visual style of a header separately.
 
-#### Header Level (HTML Semantics)
+#### Header level (HTML semantics)
 
 Use the `level` attribute to control the semantic heading level (`<h1>` through `<h6>`).
 
-If `visualLevel` is not specified, `visualLevel` will default to the same value as `level`.
+When you don't set `visualLevel`, it uses the value of `level`, including after `level` changes.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/level.html) -->
@@ -40,7 +40,7 @@ If `visualLevel` is not specified, `visualLevel` will default to the same value 
 
 </auro-accordion>
 
-#### Header Style (Visual Appearance) <a name="visualLevel"></a>
+#### Header style (visual appearance) <a name="visualLevel"></a>
 
 Use the `visualLevel` attribute to control the visual style of the header.
 
@@ -56,13 +56,13 @@ Use the `visualLevel` attribute to control the visual style of the header.
 
 </auro-accordion>
 
-#### Typography <a name="typography"></a> to Heading CSS Class Mapping
+#### Typography <a name="typography"></a> to heading CSS class mapping
 
 The `visualLevel` attribute controls the visual style of the header by mapping to specific <a href="https://auro.alaskaair.com/typography/usage" target="_blank">typography classes</a>.
 
 Below is how each `visualLevel` value corresponds to a typography class:
 
-| visualLevel | `typography="heading"`    |  `typography="display"`  |
+| `visualLevel` | `typography="heading"`    |  `typography="display"`  |
 |-----------------|---------------|---------------|
 | `1`           | `heading-xl` | `display-2xl` |
 | `2`           | `heading-lg`  | `display-xl`  |
@@ -73,11 +73,11 @@ Below is how each `visualLevel` value corresponds to a typography class:
 
 These classes apply consistent typography styles, including font size, line height, font weight, and more, ensuring uniform header presentation across components.
 
-## Common Usage Patterns & Functional Examples
+## Common usage patterns
 
-### Additional Header Examples
+### Additional header examples
 
-Additional examples with various header `level` and `visualLevel` options.
+See more examples that combine `level` and `visualLevel`.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/additional-examples.html) -->
@@ -91,9 +91,10 @@ Additional examples with various header `level` and `visualLevel` options.
 
 </auro-accordion>
 
-### Adjust Margins
+### Adjust margins
 
-In some cases the margin between elements may need to be adjusted. To do this, add margin using css style.
+The header has no margin of its own. To change the space around it, add a `margin` style to the element.
+
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/margins.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
@@ -106,9 +107,9 @@ In some cases the margin between elements may need to be adjusted. To do this, a
 
 </auro-accordion>
 
-### Color Inheritance
+### Color inheritance
 
-If there is a CSS selector that has the color definition you want to use with the header, simply wrap the header in a `div` or `span` and the auro-header component will inherit the color.
+To use a color from your page styles, wrap the header in a `div` or `span` that sets `color`. The header inherits it.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/color-inheritance.html) -->

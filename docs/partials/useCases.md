@@ -1,4 +1,4 @@
-The `<auro-header>` element should be used in situations where users may:
+Use `<auro-header>` when you need:
 
-* page header
-* content / paragraph header
+* A title at the top of a page.
+* A heading above a section or paragraph of content.
